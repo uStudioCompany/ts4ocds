@@ -17,9 +17,6 @@
     "ts"
   ],
   "repository": "github:uStudioCompany/ts4ocds",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "homepage": "https://github.com/uStudioCompany/ts4ocds",
   "scripts": {
     "clean": "rimraf docs",

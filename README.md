@@ -1,4 +1,4 @@
-![logo](ts4ocds-banner.svg)
+![logo](https://raw.githubusercontent.com/uStudioCompany/ts4ocds/master/ts4ocds-banner.png)
 
 [![npm](https://img.shields.io/npm/v/ts4ocds.svg)](https://www.npmjs.com/package/ts4ocds)
 [![npm](https://img.shields.io/badge/dependencies-0-brightgreen)](https://www.npmjs.com/package/ts4ocds)
