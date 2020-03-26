@@ -20,7 +20,7 @@
   "homepage": "https://github.com/uStudioCompany/ts4ocds",
   "scripts": {
     "clean": "rimraf docs",
-    "docs": "typedoc && cp ts4ocds-banner.svg docs",
+    "docs": "typedoc",
     "build": "npm-run-all clean docs -s",
     "deploy": "gh-pages -d docs",
     "release": "npm-run-all build deploy -s"
