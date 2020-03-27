@@ -1,3 +1,3 @@
 export * from './lot';
-export * from './lot-group';
+export * from 'extensions/lots/lot-group';
 export * from './extension';
