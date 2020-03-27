@@ -3,7 +3,7 @@
  * @module Conversions
  */
 
-import type { Observation as MainObservation } from 'metrics';
-import type { Option } from 'options';
+import { WithOptions } from './with-options';
+import type { Observation } from 'metrics';
 
-export type Observation = MainObservation & { options?: Option[] };
+export type ObservationWithOptions = Observation & WithOptions;
