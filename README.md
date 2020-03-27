@@ -13,7 +13,17 @@ writing whole lotta interfaces for them.
 
 It consists of two main parts: `standard` and `extensions`.
 
-## `standard`
+## Installation
+
+```shell script
+$ npm i -D ts4octs
+# or
+$ yarn add -D ts4octs
+```
+
+## Usage
+
+### `standard`
 
 This includes all types and interfaces from bare
 [OCDS v1.1.4](https://standard.open-contracting.org/latest/en/) standard.
@@ -26,7 +36,7 @@ Note, that some top-level entities like `Tender` or `Planning`
 are not included here as they sometimes depend on a context they are
 used in.
 
-## `extensions`
+### `extensions`
 
 ```typescript
 import { Observation } from 'ts4ocds/extensions/metrics';

@@ -3,7 +3,7 @@
  * @module Metrics
  */
 
-import type { Award as MainAward } from 'packages/ts4ocds/standard';
+import type { Award as MainAward } from 'standard';
 import type { Metric } from '../metric';
 
 export interface Award extends MainAward {

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "baseUrl": "../..",
+    "baseUrl": ".",
     "paths": {
       "standard/*": ["./standard/*"],
       "standard": ["./standard"],

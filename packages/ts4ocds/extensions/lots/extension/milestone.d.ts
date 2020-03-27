@@ -4,7 +4,7 @@
  */
 
 import type { Lot } from '../lot';
-import type { Milestone as MainMilestone } from 'packages/ts4ocds/standard';
+import type { Milestone as MainMilestone } from 'standard';
 
 export interface Milestone extends MainMilestone {
   /**

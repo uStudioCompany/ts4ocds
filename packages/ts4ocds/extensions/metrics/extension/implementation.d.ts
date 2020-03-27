@@ -3,7 +3,7 @@
  * @module Metrics
  */
 
-import type { Implementation as MainImplementation } from 'packages/ts4ocds/standard';
+import type { Implementation as MainImplementation } from 'standard';
 import type { Metric } from '../metric';
 
 export interface Implementation extends MainImplementation {

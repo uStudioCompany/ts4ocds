@@ -3,7 +3,7 @@
  * @module Requirements
  */
 
-import type { Award as MainAward } from 'packages/ts4ocds/standard';
+import type { Award as MainAward } from 'standard';
 import type { RequirementResponse } from '../requirement';
 
 export interface Award extends MainAward {
