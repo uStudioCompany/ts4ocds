@@ -1,5 +1,11 @@
 .idea
+.DS_store
 node_modules
-yarn.lock
+
 docs
-.DS_Store
+public
+dist
+.cache
+
+yarn-error.log
+api.json
