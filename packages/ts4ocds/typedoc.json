@@ -2,7 +2,7 @@
   "name": "TS4OCDS",
   "inputFiles": ["./standard", "./extensions"],
   "out": "docs",
-  "exclude": ["*/**/node_modules/**/*", "**/index.d.ts"],
+  "exclude": ["**/node_modules/**/*", "**/index.d.ts"],
   "includeDeclarations": true,
   "disableSources": true,
   "readme": "../../README.md",
