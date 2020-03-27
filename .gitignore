@@ -9,3 +9,6 @@ dist
 
 yarn-error.log
 api.json
+
+packages/ts4ocds/LICENSE
+packages/ts4ocds/README.md
