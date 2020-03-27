@@ -5,7 +5,8 @@
   "files": [
     "standard",
     "extensions",
-    "index.d.ts"
+    "index.d.ts",
+    "LICENSE"
   ],
   "license": "MIT",
   "author": "uStudio Front-End Department",

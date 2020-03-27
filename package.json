@@ -1,8 +1,6 @@
 {
   "name": "ts4ocds",
   "version": "0.0.0.",
-  "repository": "https://github.com/uStudioCompany/ts4ocds.git",
-  "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/*"

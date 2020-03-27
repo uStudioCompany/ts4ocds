@@ -1,3 +1,11 @@
 .idea
 .DS_store
 node_modules
+
+docs
+public
+dist
+.cache
+
+yarn-error.log
+api.json

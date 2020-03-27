@@ -27,7 +27,7 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "ignorePatterns": ["gatsby-*.js"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/prop-types": "off",
     "import/extensions": "off",
