@@ -5,7 +5,7 @@
 
 import type { Observation } from 'metrics';
 import type { OptionGroupRelatesTo } from './option-group';
-import type { Address, Period, Unit } from 'packages/ts4ocds/standard';
+import type { Address, Period, Unit } from 'standard';
 
 /**
  * Available prescribed option for requirement/observation that can be set as a value for bid.requirementResponse/award.

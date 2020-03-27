@@ -3,7 +3,7 @@
  *  @module Lots
  */
 
-import type { Value } from 'packages/ts4ocds/standard';
+import type { Value } from 'standard';
 import type { Lot } from './lot';
 
 /**

@@ -4,7 +4,7 @@
  */
 
 import type { Lot } from '../lot';
-import type { Item as MainItem } from 'packages/ts4ocds/standard';
+import type { Item as MainItem } from 'standard';
 
 export interface Item extends MainItem {
   /**

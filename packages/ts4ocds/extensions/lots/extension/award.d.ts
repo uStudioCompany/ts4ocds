@@ -4,7 +4,7 @@
  */
 
 import type { Lot } from '../lot';
-import type { Award as MainAward } from 'packages/ts4ocds/standard';
+import type { Award as MainAward } from 'standard';
 
 export interface Award extends MainAward {
   /**

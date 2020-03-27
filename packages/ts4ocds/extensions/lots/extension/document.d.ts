@@ -4,7 +4,7 @@
  */
 
 import type { Lot } from '../lot';
-import type { Document as MainDocument } from 'packages/ts4ocds/standard';
+import type { Document as MainDocument } from 'standard';
 
 export interface Document extends MainDocument {
   /**

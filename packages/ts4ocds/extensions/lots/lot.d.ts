@@ -3,7 +3,7 @@
  *  @module Lots
  */
 
-import type { Value, TenderStatus } from 'packages/ts4ocds/standard';
+import type { Value, TenderStatus } from 'standard';
 
 /**
  * A lot is a grouping of items within a tender that can be bid on or awarded together.
