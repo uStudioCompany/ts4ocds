@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["esnext"],
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "keyofStringsOnly": true,

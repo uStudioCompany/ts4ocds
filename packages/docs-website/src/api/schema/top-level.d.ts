@@ -2,11 +2,11 @@ import type { Reflection } from './reflection';
 import type { Type } from './type';
 
 export interface ReflectionsMap {
-  [id: string]: Reflection;
+  [id: number]: Reflection;
 }
 
 export interface Entity {
-  id: string;
+  id: number;
   name: string;
   kindString: string;
   typeParameter?: TypeParameter[];
