@@ -6,4 +6,4 @@
 import type { Requirement } from 'requirements';
 import type { WithOptionDetails } from './with-option-details';
 
-export type RequirementWithOptionDetails = Requirement & WithOptionDetails;
+export interface RequirementWithOptionDetails extends Requirement, WithOptionDetails {}

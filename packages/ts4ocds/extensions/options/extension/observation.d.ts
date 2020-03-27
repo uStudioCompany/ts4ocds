@@ -6,4 +6,4 @@
 import type { Observation } from 'metrics';
 import type { WithOptionDetails } from './with-option-details';
 
-export type ObservationWithOptionDetails = Observation & WithOptionDetails;
+export interface ObservationWithOptionDetails extends Observation, WithOptionDetails {}

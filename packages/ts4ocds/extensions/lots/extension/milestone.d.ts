@@ -9,4 +9,4 @@ import type { Milestone } from 'standard';
 /**
  * If this milestone relates to one or more specific lots, provide the identifier(s) of the related lot(s) here.
  */
-export type MilestoneWithRelatedLots = Milestone & WithRelatedLots;
+export interface MilestoneWithRelatedLots extends Milestone, WithRelatedLots {}
