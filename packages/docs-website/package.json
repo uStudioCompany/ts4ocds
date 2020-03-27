@@ -1,0 +1,55 @@
+{
+  "name": "ts4ocds-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.19.45",
+    "gatsby-image": "^2.2.44",
+    "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-offline": "^3.0.41",
+    "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-plugin-typescript": "^2.3.1",
+    "gatsby-source-filesystem": "^2.1.56",
+    "gatsby-transformer-sharp": "^2.3.19",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.0.1",
+    "ustudio-ui": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  },
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.tsx?": "prettier --write"
+  }
+}
