@@ -6,9 +6,7 @@
 import type { Award } from 'standard';
 import type { Metric } from '../metric';
 
-export type AwardWithAgreedMetrics = Award & WithAgreedMetrics;
-
-interface WithAgreedMetrics {
+export interface AwardWithAgreedMetrics extends Award {
   /**
    * Any target metrics set out as part of the contract award.
    */
