@@ -3,9 +3,7 @@
  * @module Options
  */
 
-import type { OptionDetails } from '../option-details';
-import type { Requirement as MainRequirement } from 'requirements';
+import type { Requirement } from 'requirements';
+import type { WithOptionDetails } from './with-option-details';
 
-export type Requirement = MainRequirement & {
-  optionDetails?: OptionDetails;
-};
+export interface RequirementWithOptionDetails extends Requirement, WithOptionDetails {}

@@ -3,12 +3,10 @@
  *  @module Lots
  */
 
-import type { Lot } from '../lot';
-import type { Document as MainDocument } from 'standard';
+import type { WithRelatedLots } from './with-related-lots';
+import type { Document } from 'standard';
 
-export interface Document extends MainDocument {
-  /**
-   * If this document relates to a particular lot, provide the identifier(s) of the related lot(s) here.
-   */
-  relatedLots?: Lot['id'][];
-}
+/**
+ * If this document relates to a particular lot, provide the identifier(s) of the related lot(s) here.
+ */
+export interface DocumentWithRelatedLots extends Document, WithRelatedLots {}

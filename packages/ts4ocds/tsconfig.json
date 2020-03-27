@@ -19,7 +19,8 @@
     "forceConsistentCasingInFileNames": true,
     "keyofStringsOnly": true,
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules"

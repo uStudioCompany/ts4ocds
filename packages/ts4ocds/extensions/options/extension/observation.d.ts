@@ -3,9 +3,7 @@
  * @module Options
  */
 
-import type { Observation as MainObservation } from 'metrics';
-import type { OptionDetails } from '../option-details';
+import type { Observation } from 'metrics';
+import type { WithOptionDetails } from './with-option-details';
 
-export type Observation = MainObservation & {
-  optionDetails?: OptionDetails;
-};
+export interface ObservationWithOptionDetails extends Observation, WithOptionDetails {}

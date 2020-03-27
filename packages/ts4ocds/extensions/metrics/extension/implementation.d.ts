@@ -3,10 +3,10 @@
  * @module Metrics
  */
 
-import type { Implementation as MainImplementation } from 'standard';
+import type { Implementation } from 'standard';
 import type { Metric } from '../metric';
 
-export interface Implementation extends MainImplementation {
+export interface ImplementationWithMetrics extends Implementation {
   /**
    * Reported results from the delivery of the contracted goods, works or services.
    */
