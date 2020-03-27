@@ -8,7 +8,8 @@ dist
 .cache
 
 yarn-error.log
-api.json
+
+packages/docs-website/src/api/api.json
 
 packages/ts4ocds/LICENSE
 packages/ts4ocds/README.md
