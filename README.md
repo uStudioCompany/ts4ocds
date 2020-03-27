@@ -16,9 +16,9 @@ It consists of two main parts: `standard` and `extensions`.
 ## Installation
 
 ```shell script
-$ npm i -D ts4octs
+$ npm i -D ts4ocds
 # or
-$ yarn add -D ts4octs
+$ yarn add -D ts4ocds
 ```
 
 ## Usage
