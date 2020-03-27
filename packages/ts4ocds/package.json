@@ -1,6 +1,6 @@
 {
   "name": "ts4ocds",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "types": "index.d.ts",
   "files": [
     "standard",
@@ -26,7 +26,7 @@
     "build": "npm-run-all clean docs -s",
     "deploy": "gh-pages -d docs",
     "release": "npm-run-all build deploy -s",
-    "prepublishOnly": "copyfiles -u 2 ../../README.md ../../LICENSE.md ."
+    "prepublishOnly": "copyfiles -u 2 ../../README.md ../../LICENSE ."
   },
   "peerDependencies": {
     "typescript": "^3.8.3"
