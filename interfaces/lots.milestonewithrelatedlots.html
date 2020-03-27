@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BaseOption | TS4OCDS</title>
+	<title>MilestoneWithRelatedLots | TS4OCDS</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules/options.html">Options</a>
+					<a href="../modules/lots.html">Lots</a>
 				</li>
 				<li>
-					<a href="options.baseoption.html">BaseOption</a>
+					<a href="lots.milestonewithrelatedlots.html">MilestoneWithRelatedLots</a>
 				</li>
 			</ul>
 		</div>
@@ -77,74 +77,169 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Interface BaseOption</h1>
+			<h1>Interface MilestoneWithRelatedLots</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>If this milestone relates to one or more specific lots, provide the identifier(s) of the related lot(s) here.</p>
+			</div></div></section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BaseOption</span>
+						<a href="planning.milestone.html" class="tsd-signature-type">Milestone</a>
+					</li>
+					<li>
+						<a href="lots.withrelatedlots.html" class="tsd-signature-type">WithRelatedLots</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">MilestoneWithRelatedLots</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options.baseoption.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options.baseoption.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options.baseoption.html#title" class="tsd-kind-icon">title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options.baseoption.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#code" class="tsd-kind-icon">code</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#datemet" class="tsd-kind-icon">dateMet</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#datemodified" class="tsd-kind-icon">dateModified</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#duedate" class="tsd-kind-icon">dueDate</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#relatedlots" class="tsd-kind-icon">relatedLots</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#status" class="tsd-kind-icon">status</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="lots.milestonewithrelatedlots.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="code" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> code</h3>
+					<div class="tsd-signature tsd-kind-icon">code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#code">code</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>Milestone codes can be used to track specific events that take place for a particular kind of contracting process.
+								For example, a code of &#39;approvalLetter&#39; can be used to allow applications to understand this milestone
+							represents the date an approvalLetter is due or signed.</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="datemet" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> date<wbr>Met</h3>
+					<div class="tsd-signature tsd-kind-icon">date<wbr>Met<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#datemet">dateMet</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The date on which the milestone was met.</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="datemodified" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> date<wbr>Modified</h3>
+					<div class="tsd-signature tsd-kind-icon">date<wbr>Modified<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#datemodified">dateModified</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The date the milestone was last reviewed or modified and the status was altered or confirmed to still be correct.</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="description" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> description</h3>
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#description">description</a></p>
 					</aside>
 					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 						<div class="lead">
-							<p>Free-text description for this option</p>
+							<p>A description of the milestone.</p>
 					</div></div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="duedate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> due<wbr>Date</h3>
+					<div class="tsd-signature tsd-kind-icon">due<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#duedate">dueDate</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The date the milestone is due.</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
 					<h3>id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#id">id</a></p>
 					</aside>
 					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 						<div class="lead">
-							<p>An identifier for this option.</p>
+							<p>A local identifier for this milestone, unique within this block.
+							This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism.</p>
 					</div></div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="relatedlots" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> related<wbr>Lots</h3>
+					<div class="tsd-signature tsd-kind-icon">related<wbr>Lots<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="lots.withrelatedlots.html">WithRelatedLots</a>.<a href="lots.withrelatedlots.html#relatedlots">relatedLots</a></p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="status" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> status</h3>
+					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <a href="../modules/planning.html#milestonestatus" class="tsd-signature-type">MilestoneStatus</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#status">status</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>The status that was realized on the date provided in <code>dateModified</code>,
+							from the closed <a href="https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status">milestoneStatus</a> codelist.</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="title" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> title</h3>
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#title">title</a></p>
 					</aside>
 					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 						<div class="lead">
-							<p>Title for this option</p>
+							<p>Milestone title</p>
 					</div></div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="value" class="tsd-anchor"></a>
-					<h3>value</h3>
-					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="type" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../modules/planning.html#milestonetype" class="tsd-signature-type">MilestoneType</a></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="planning.milestone.html">Milestone</a>.<a href="planning.milestone.html#type">type</a></p>
 					</aside>
 					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
 						<div class="lead">
-							<p>Value provided by this option</p>
+							<p>The nature of the milestone,
+							using the open <a href="https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-type">milestoneType</a> codelist.</p>
 					</div></div>
 				</section>
 			</section>
@@ -153,53 +248,65 @@
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module root">
+						<a href="lots.awardwithrelatedlots.html" class="tsd-kind-icon">Award<wbr>With<wbr>Related<wbr>Lots</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module root">
+						<a href="lots.documentwithrelatedlots.html" class="tsd-kind-icon">Document<wbr>With<wbr>Related<wbr>Lots</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module root">
+						<a href="lots.itemwithrelatedlot.html" class="tsd-kind-icon">Item<wbr>With<wbr>Related<wbr>Lot</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module root">
+						<a href="lots.lot.html" class="tsd-kind-icon">Lot</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module root">
+						<a href="lots.lotgroup.html" class="tsd-kind-icon">Lot<wbr>Group</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module root">
-						<a href="options.baseoption.html" class="tsd-kind-icon">Base<wbr>Option</a>
+						<a href="lots.milestonewithrelatedlots.html" class="tsd-kind-icon">Milestone<wbr>With<wbr>Related<wbr>Lots</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="options.baseoption.html#description" class="tsd-kind-icon">description</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#code" class="tsd-kind-icon">code</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="options.baseoption.html#id" class="tsd-kind-icon">id</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#datemet" class="tsd-kind-icon">date<wbr>Met</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="options.baseoption.html#title" class="tsd-kind-icon">title</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#datemodified" class="tsd-kind-icon">date<wbr>Modified</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="options.baseoption.html#value" class="tsd-kind-icon">value</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#description" class="tsd-kind-icon">description</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#duedate" class="tsd-kind-icon">due<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#relatedlots" class="tsd-kind-icon">related<wbr>Lots</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#status" class="tsd-kind-icon">status</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#title" class="tsd-kind-icon">title</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="lots.milestonewithrelatedlots.html#type" class="tsd-kind-icon">type</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module root">
-						<a href="options.lotwithoptiondetails.html" class="tsd-kind-icon">Lot<wbr>With<wbr>Option<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module root">
-						<a href="options.observationwithoptiondetails.html" class="tsd-kind-icon">Observation<wbr>With<wbr>Option<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module root">
-						<a href="options.optiongroup.html" class="tsd-kind-icon">Option<wbr>Group</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module root">
-						<a href="options.optiontocombine.html" class="tsd-kind-icon">Option<wbr>ToCombine</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module root">
-						<a href="options.requirementwithoptiondetails.html" class="tsd-kind-icon">Requirement<wbr>With<wbr>Option<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module root">
-						<a href="options.withoptiondetails.html" class="tsd-kind-icon">With<wbr>Option<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter root">
-						<a href="../modules/options.html#option" class="tsd-kind-icon">Option</a>
+						<a href="lots.withrelatedlots.html" class="tsd-kind-icon">With<wbr>Related<wbr>Lots</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module root">
-						<a href="../modules/options.html#optiondetails" class="tsd-kind-icon">Option<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module root">
-						<a href="../modules/options.html#optiongrouprelatesto" class="tsd-kind-icon">Option<wbr>Group<wbr>Relates<wbr>To</a>
+						<a href="../modules/lots.html#lotstatus" class="tsd-kind-icon">Lot<wbr>Status</a>
 					</li>
 				</ul>
 			</nav>
