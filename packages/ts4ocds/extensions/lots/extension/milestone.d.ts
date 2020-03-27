@@ -3,12 +3,10 @@
  *  @module Lots
  */
 
-import type { Lot } from '../lot';
-import type { Milestone as MainMilestone } from 'standard';
+import type { WithRelatedLots } from './with-related-lots';
+import type { Milestone } from 'standard';
 
-export interface Milestone extends MainMilestone {
-  /**
-   * If this milestone relates to one or more specific lots, provide the identifier(s) of the related lot(s) here.
-   */
-  relatedLots?: Lot['id'][];
-}
+/**
+ * If this milestone relates to one or more specific lots, provide the identifier(s) of the related lot(s) here.
+ */
+export type MilestoneWithRelatedLots = Milestone & WithRelatedLots;

@@ -3,10 +3,10 @@
  * @module Metrics
  */
 
-import type { Award as MainAward } from 'standard';
+import type { Award } from 'standard';
 import type { Metric } from '../metric';
 
-export interface Award extends MainAward {
+export interface AwardWithAgreedMetrics extends Award {
   /**
    * Any target metrics set out as part of the contract award.
    */

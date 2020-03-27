@@ -3,7 +3,7 @@
  * @module Conversions
  */
 
-import type { Requirement as MainRequirement } from 'requirements';
-import type { Option } from 'options';
+import type { WithOptions } from 'extensions/conversions/extension/with-options';
+import type { Requirement } from 'requirements';
 
-export type Requirement = MainRequirement & { options?: Option[] };
+export type RequirementWithOptions = Requirement & WithOptions;
