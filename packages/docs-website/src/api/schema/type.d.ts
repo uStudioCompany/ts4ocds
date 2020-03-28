@@ -1,4 +1,5 @@
 import type { BasicType } from './basic-type';
+import type { VariableReflection } from './reflection';
 
 export type Type = BasicType | UnionType | IntersectionType | ArrayType | ObjectType;
 
@@ -7,20 +8,21 @@ export interface ObjectType {
   declaration: {
     name: '__type';
     kindString: 'Type literal';
+    children?: VariableReflection[];
   };
 }
 
 export interface UnionType {
   type: 'union';
-  types: BasicType[];
+  types: Type[];
 }
 
 export interface IntersectionType {
   type: 'intersection';
-  types: BasicType[];
+  types: Type[];
 }
 
 export interface ArrayType {
   type: 'array';
-  elementType: BasicType;
+  elementType: Type;
 }

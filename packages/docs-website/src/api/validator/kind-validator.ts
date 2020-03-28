@@ -1,5 +1,4 @@
-import type { Entity, InterfaceReflection, TypeAliasReflection, TypeParameter } from '../schema';
-import { Property } from '../schema/property';
+import type { Entity, InterfaceReflection, TypeAliasReflection, TypeParameter, Property } from '../schema';
 
 export const isProperty = (entity: Entity): entity is Property => entity.kindString === 'Property';
 
