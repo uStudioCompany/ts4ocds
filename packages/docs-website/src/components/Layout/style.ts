@@ -14,6 +14,10 @@ const Main = styled(Grid)`
   padding: var(--i-large);
 `;
 
+const Container = styled(Flex)`
+  width: 100%;
+`;
+
 const Footer = styled(Flex)`
   padding: var(--i-medium) var(--i-large);
   background-color: var(--c-light);
@@ -23,4 +27,4 @@ const Copyright = styled.small`
   margin-right: var(--i-medium);
 `;
 
-export default { Layout, Main, Footer, Copyright };
+export default { Layout, Main, Footer, Copyright, Container };

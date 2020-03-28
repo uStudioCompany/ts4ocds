@@ -7,11 +7,13 @@ export type Reflection = InterfaceReflection | TypeAliasReflection;
 export interface InterfaceReflection extends Entity {
   kindString: 'Interface';
   children: Property[];
+  module: string;
 }
 
 export interface TypeAliasReflection extends Entity {
   kindString: 'Type alias';
   type: Type;
+  module: string;
 }
 
 export interface VariableReflection extends Entity {

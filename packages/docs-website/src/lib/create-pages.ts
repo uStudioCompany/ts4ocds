@@ -6,7 +6,7 @@ export const createPages: GatsbyNode['createPages'] = ({ actions: { createPage }
   Object.values(generateReflectionsMap()).forEach((reflection) => {
     createPage({
       path: `/${reflection.module}/${reflection.name}`,
-      component: resolve('./src/components/StringifyTemplate.tsx'),
+      component: resolve('./src/components/Reflection/index.tsx'),
       context: { ...reflection },
     });
   });

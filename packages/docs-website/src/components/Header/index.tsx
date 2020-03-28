@@ -5,7 +5,7 @@ import Styled from './style';
 
 const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => (
   <Styled.Header>
-    <h1>
+    <Styled.SiteTitle>
       <Link
         to="/"
         style={{
@@ -15,7 +15,7 @@ const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => (
       >
         {siteTitle}
       </Link>
-    </h1>
+    </Styled.SiteTitle>
   </Styled.Header>
 );
 
