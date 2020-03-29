@@ -18,5 +18,8 @@ export interface TypeAliasReflection extends Entity {
 
 export interface VariableReflection extends Entity {
   kindString: 'Variable';
-  type?: Type;
+  type: Type;
+  flags: {
+    isOptional?: true;
+  };
 }

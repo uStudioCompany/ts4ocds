@@ -23,7 +23,7 @@ const Layout: React.FC = ({ children }) => {
   `);
 
   return (
-    <ThemeProvider>
+    <ThemeProvider override={{ palette: { primary: '#007ACC', 'primary-light': '#9BAF00' } }}>
       <APIContext.Provider
         value={{
           reflections: generateReflectionsMap(),

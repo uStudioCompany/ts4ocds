@@ -1,5 +1,6 @@
+import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import { Flex, Text } from 'ustudio-ui';
+import { Flex } from 'ustudio-ui';
 
 const Reflection = styled(Flex)`
   width: 100%;
@@ -15,7 +16,7 @@ const PropertyList = styled.ul`
 `;
 PropertyList.displayName = 'PropertyList';
 
-const Description = styled(Text)`
+const Description = styled(ReactMarkdown)`
   color: var(--c-dark);
 `;
 Description.displayName = 'Description';

@@ -1,12 +1,11 @@
-import { Link } from 'gatsby';
 import React, { ReactNode } from 'react';
-import { ReflectionsMap, UnionType } from '../../api/schema';
+import { v4 } from 'uuid';
+import { IntersectionType, UnionType } from '../../api/schema';
 import { isIntrinsic } from '../../api/validator';
-import { useReflections } from '../../context/APIContext';
+import Reference from './Reference';
+import Reflection from './Reflection';
 
-import Styled from './style';
-
-const sortUnion = (union: UnionType, references: ReflectionsMap): ReactNode[] => {
+const mapUnion = (union: UnionType | IntersectionType): ReactNode[] => {
   return union.types
     .filter((type) => !(isIntrinsic(type) && type.name === 'undefined'))
     .map((type) => {
@@ -18,13 +17,10 @@ const sortUnion = (union: UnionType, references: ReflectionsMap): ReactNode[] =>
           return `'${type.value}'`;
         }
         case 'reference': {
-          const reference = references[type.id];
-
-          return <Link to={`${reference.module}/${reference.name}`}>{reference.name}</Link>;
+          return <Reference {...type} />;
         }
         case 'reflection': {
-          // @ToDo: somehow parse a reflection type
-          return '{}';
+          return <Reflection {...type} />;
         }
         default: {
           return '';
@@ -33,10 +29,17 @@ const sortUnion = (union: UnionType, references: ReflectionsMap): ReactNode[] =>
     });
 };
 
-const Union: React.FC<UnionType> = (union) => {
-  const references = useReflections();
+const renderNode = (separator: '|' | '&') => (node: ReactNode, index: number, array: ReactNode[]) => {
+  return (
+    <React.Fragment key={v4()}>
+      {node}
+      {index < array.length - 1 && <>&nbsp;{separator}&nbsp;</>}
+    </React.Fragment>
+  );
+};
 
-  return <Styled.Type>{sortUnion(union, references).join(' | ')}</Styled.Type>;
+const Union: React.FC<(UnionType | IntersectionType) & { separator?: '|' | '&' }> = ({ separator = '|', ...union }) => {
+  return <>{mapUnion(union).map(renderNode(separator))}</>;
 };
 
 export default Union;

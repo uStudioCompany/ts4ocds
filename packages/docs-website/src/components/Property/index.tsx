@@ -1,9 +1,9 @@
 import React from 'react';
-import { Flex, Text } from 'ustudio-ui';
+import { Flex, Badge } from 'ustudio-ui';
 import { Type } from '../../api/schema';
 import Styled from './style';
 
-import renderType from '../Type';
+import { renderType } from '../Type';
 
 interface PropertyProps {
   name: string;
@@ -15,20 +15,17 @@ interface PropertyProps {
 const Property: React.FC<PropertyProps> = ({ name, description, type, isOptional }) => {
   return (
     <Styled.Property direction="column">
-      <Flex>
-        <Styled.Name>{`${name}:`}</Styled.Name>
+      <Flex alignment={{ horizontal: 'space-between' }}>
+        <Flex>
+          <Styled.Name>{`${name}:`}</Styled.Name>
 
-        {renderType(type)}
+          <Styled.Type>{renderType(type)}</Styled.Type>
+        </Flex>
+
+        {isOptional && <Badge appearance={{ background: 'var(--c-light)', color: 'var(--c-darkest)' }}>?</Badge>}
       </Flex>
 
-      <Styled.Meta>
-        {isOptional && (
-          <Styled.Optional appearance={{ background: 'var(--c-light)', color: 'var(--c-darkest)' }}>
-            optional
-          </Styled.Optional>
-        )}
-        <Text variant="small">{description}</Text>
-      </Styled.Meta>
+      {description && <Styled.Description source={description} />}
     </Styled.Property>
   );
 };
