@@ -8,8 +8,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
       },
     },
     `gatsby-transformer-sharp`,
@@ -19,7 +27,7 @@ module.exports = {
       options: {
         name: `TS4OCDS Documentation`,
         start_url: `/`,
-        icon: `src/images/ts4ocds-favicon.png`,
+        icon: `src/assets/images/ts4ocds-favicon.png`,
       },
     },
     'gatsby-plugin-styled-components',

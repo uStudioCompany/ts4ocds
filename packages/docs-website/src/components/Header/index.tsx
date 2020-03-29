@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import categories from '../../lib/categories';
+import CategoryMenu from './CategoryMenu';
 
 import Styled from './style';
 
@@ -16,6 +18,14 @@ const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => (
         {siteTitle}
       </Link>
     </Styled.SiteTitle>
+
+    <Styled.ButtonsList>
+      {Object.keys(categories).map((category) => (
+        <li key={category}>
+          <CategoryMenu name={category} modules={categories[category].map((module) => module.name)} />
+        </li>
+      ))}
+    </Styled.ButtonsList>
   </Styled.Header>
 );
 
