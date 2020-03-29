@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndexedAccess as IndexedAccessType } from '../../api/schema';
+import { IndexedAccess as IndexedAccessType } from '../../../../api/schema';
 import renderType from './render-type';
 
 const IndexedAccess: React.FC<IndexedAccessType> = (indexedAccess) => {

@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
-import { hasTypeParameter, isInterface } from '../../api/validator';
-import { Reflection, Property as PropertyType, TypeAliasReflection } from '../../api/schema';
-import Layout from '../Layout';
-import Property from '../Property';
+import { hasTypeParameter, isInterface } from '../../../api/validator';
+import { Reflection, Property as PropertyType, TypeAliasReflection } from '../../../api/schema';
+import Layout from '../../Layout';
+import Property from './Property';
 import ModuleContext from './module-context';
 
 import Styled from './style';

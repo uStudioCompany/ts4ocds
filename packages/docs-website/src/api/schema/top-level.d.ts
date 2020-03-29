@@ -5,10 +5,6 @@ export interface ReflectionsMap {
   [id: number]: Reflection;
 }
 
-export interface EntitiesMap {
-  [id: number]: Entity;
-}
-
 export interface ModulesMap {
   [id: number]: Module;
 }
