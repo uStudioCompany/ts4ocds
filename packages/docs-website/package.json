@@ -2,14 +2,16 @@
   "name": "ts4ocds-website",
   "version": "1.0.0",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "copy-readme": "copyfiles -u 2 ../../README.md .",
+    "build": "yarn copy-readme && gatsby build",
+    "develop": "yarn copy-readme && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "copyfiles": "^2.2.0",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-manifest": "^2.2.48",
@@ -21,6 +23,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
+    "raw-loader": "^4.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",

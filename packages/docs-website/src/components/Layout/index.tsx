@@ -23,7 +23,11 @@ const Layout: React.FC = ({ children }) => {
   `);
 
   return (
-    <ThemeProvider override={{ palette: { primary: '#007ACC', 'primary-light': '#9BAF00' } }}>
+    <ThemeProvider
+      override={{
+        palette: { primary: '#007ACC', 'primary-light': '#9BAF00' },
+      }}
+    >
       <APIContext.Provider
         value={{
           reflections: generateReflectionsMap(),
@@ -33,7 +37,7 @@ const Layout: React.FC = ({ children }) => {
         <Styled.Layout>
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <Styled.Main isContainer>
+          <Styled.Main isContainer lg={{ maxWidth: 1024 }}>
             <Cell>
               <Styled.Container direction="column">{children}</Styled.Container>
             </Cell>
