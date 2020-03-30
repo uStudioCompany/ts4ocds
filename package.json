@@ -7,6 +7,7 @@
   ],
   "scripts": {
     "ts4ocds:build": "yarn --cwd ./packages/ts4ocds build",
+    "ts4ocds:release": "yarn ts4ocds:build && yarn --cwd ./packages/ts4ocds release",
     "website:dev": "yarn ts4ocds:build && yarn --cwd ./packages/docs-website dev",
     "website:deploy": "yarn ts4ocds:build && yarn --cwd ./packages/docs-website deploy"
   },

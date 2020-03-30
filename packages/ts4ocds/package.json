@@ -22,7 +22,8 @@
   "homepage": "https://github.com/uStudioCompany/ts4ocds",
   "scripts": {
     "build": "typedoc",
-    "prepublishOnly": "copyfiles -u 2 ../../README.md ../../LICENSE ."
+    "prepublishOnly": "copyfiles -u 2 ../../README.md ../../LICENSE .",
+    "release": "yarn build && yarn publish"
   },
   "peerDependencies": {
     "typescript": "^3.8.3"
