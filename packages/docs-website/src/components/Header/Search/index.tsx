@@ -6,7 +6,7 @@ import Styled from './style';
 import StyledHeader from '../style';
 
 const findModules = ({ query, modules }: { query: string; modules: Partial<Module>[] }): Partial<Module>[] => {
-  return modules.filter((module) => module.name?.toLowerCase().includes(query.toLowerCase()));
+  return modules.filter((module) => module.name?.toLowerCase().includes(query.trim().toLowerCase()));
 };
 
 const findReflections = ({
@@ -16,7 +16,7 @@ const findReflections = ({
   query: string;
   reflections: Partial<Reflection>[];
 }): Partial<Reflection>[] => {
-  return reflections.filter((reflection) => reflection.name?.toLowerCase().includes(query.toLowerCase()));
+  return reflections.filter((reflection) => reflection.name?.toLowerCase().includes(query.trim().toLowerCase()));
 };
 
 const renderModules = (modules: Partial<Module>[]): ReactNode => {
