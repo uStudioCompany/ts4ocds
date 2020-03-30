@@ -22,7 +22,7 @@ const Property: React.FC<PropertyProps> = ({ name, description, type, isOptional
           <Styled.Type>{renderType(type)}</Styled.Type>
         </Flex>
 
-        {isOptional && <Badge appearance={{ background: 'var(--c-light)', color: 'var(--c-darkest)' }}>?</Badge>}
+        {isOptional && <Badge appearance={{ background: 'var(--c-light)', color: 'var(--c-dark)' }}>?</Badge>}
       </Flex>
 
       {description && <Styled.Description source={description} />}

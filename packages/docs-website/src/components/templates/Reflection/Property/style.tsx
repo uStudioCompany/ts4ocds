@@ -38,7 +38,7 @@ const Type = styled(Flex).attrs(() => ({
   ${Mixin.Font.codeRegular()};
   white-space: pre-wrap;
 
-  color: var(--c-primary);
+  color: var(--c-primary-light);
 
   margin-left: var(--i-small);
 `;

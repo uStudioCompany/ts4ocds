@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { withDisplayNames } from '../../../utils';
@@ -15,8 +14,4 @@ const Description = styled(ReactMarkdown)`
   color: var(--c-dark);
 `;
 
-const Reference = styled(Link)`
-  color: var(--c-primary-light);
-`;
-
-export default withDisplayNames({ PropertyList, Description, Reference });
+export default withDisplayNames({ PropertyList, Description });
