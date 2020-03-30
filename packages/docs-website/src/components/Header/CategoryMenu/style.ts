@@ -76,8 +76,6 @@ const Menu = styled.ul`
   display: flex;
   flex-direction: column;
 
-  padding: var(--i-medium) 0;
-
   width: 100%;
 `;
 
