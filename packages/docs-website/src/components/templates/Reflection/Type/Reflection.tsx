@@ -4,11 +4,11 @@ import renderType from './render-type';
 
 const renderVariable = ({ name, flags, type }: VariableReflection, index: number, array: VariableReflection[]) => {
   return (
-    <>
+    <React.Fragment key={name}>
       {name}
       {flags?.isOptional ? '?' : ''}:&#32;{renderType(type)}
       {index < array.length - 1 && <>, </>}
-    </>
+    </React.Fragment>
   );
 };
 

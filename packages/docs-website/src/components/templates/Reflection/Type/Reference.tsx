@@ -22,14 +22,22 @@ const renderLink = ({
    */
   if (!references[reference.id]) {
     if (modules[reference.id]) {
-      return <Link to={createUrl(modules[reference.id].name, reference.name)}>{reference.name}</Link>;
+      return (
+        <Link to={createUrl(modules[reference.id].name, reference.name)} key={reference.name}>
+          {reference.name}
+        </Link>
+      );
     }
 
     /**
      * Where in conditional type reference id is not specified
      */
     if (!reference.id) {
-      return <Link to={createUrl(module, reference.name)}>{reference.name}</Link>;
+      return (
+        <Link to={createUrl(module, reference.name)} key={reference.name}>
+          {reference.name}
+        </Link>
+      );
     }
 
     /**
@@ -38,7 +46,11 @@ const renderLink = ({
     return `<${reference.name}>`;
   }
 
-  return <Link to={createUrl(references[reference.id].module, reference.name)}>{reference.name}</Link>;
+  return (
+    <Link to={createUrl(references[reference.id].module, reference.name)} key={reference.name}>
+      {reference.name}
+    </Link>
+  );
 };
 
 const Reference: React.FC<ReferenceType> = (reference) => {
