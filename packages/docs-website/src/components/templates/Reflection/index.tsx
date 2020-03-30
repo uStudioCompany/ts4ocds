@@ -21,6 +21,7 @@ const renderProperty = (property: TypeAliasReflection | PropertyType): ReactNode
 
 const mapProperties = (reflection: InterfaceReflection): ReactNode[] => {
   return reflection.children
+    .sort((a, b) => (a > b ? -1 : 1))
     .sort((a, b) => {
       if (a.flags?.isOptional) return 1;
 
