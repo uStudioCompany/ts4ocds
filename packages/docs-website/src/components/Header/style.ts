@@ -8,8 +8,7 @@ const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  background: linear-gradient(135deg, rgba(155, 175, 0, 0.5), rgba(0, 122, 204, 0.5)),
-    linear-gradient(45deg, rgba(0, 122, 204, 0.5), rgba(155, 175, 0, 0.5)), var(--c-primary);
+  background: var(--g-t4o);
   padding: var(--i-regular);
 `;
 

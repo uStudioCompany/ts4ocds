@@ -9,6 +9,7 @@ import { modulesMap, reflectionsMap } from '../../api';
 
 import APIContext from '../../context/APIContext';
 import Breadcrumbs from './Breadcrumbs';
+import GlobalStyles from './global-styles';
 
 import Styled from './style';
 import Header from '../Header';
@@ -66,6 +67,8 @@ const Layout: React.FC = ({ children }) => {
           </footer>
         </Styled.Layout>
       </APIContext.Provider>
+
+      <GlobalStyles />
     </ThemeProvider>
   );
 };

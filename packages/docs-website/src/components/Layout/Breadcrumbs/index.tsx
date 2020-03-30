@@ -2,8 +2,9 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import { globalHistory } from '@reach/router';
-import { Flex } from 'ustudio-ui';
-import categories from '../../lib/categories';
+import categories from '../../../lib/categories';
+
+import Styled from './style';
 
 const getFullLink = (path: string, pathArray: string[]): string => {
   return pathArray.slice(0, pathArray.indexOf(path) - 1).join('/');
@@ -20,25 +21,25 @@ const whichCategory = (path: string): 'Standard' | 'Extensions' => {
 const renderBreadcrumbs = () => {
   const pathArray = globalHistory.location.pathname.split('/').filter(Boolean);
 
-  return (
-    Boolean(pathArray.length) && (
-      <Flex>
-        <small>{whichCategory(pathArray[0])}&nbsp;</small>
+  return pathArray.length ? (
+    <Styled.Breadcrumbs>
+      <small>{whichCategory(pathArray[0])}&nbsp;</small>
 
-        {pathArray.slice(0, -1).map((path: string) => (
-          <small key={path}>
-            {' / '}
-            <Link to={`/${getFullLink(path, pathArray)}`}>{kebabToPascal(path)}</Link>&nbsp;
-          </small>
-        ))}
+      {pathArray.slice(0, -1).map((path: string) => (
+        <small key={path}>
+          {' / '}
+          <Link to={`/${getFullLink(path, pathArray)}`}>{kebabToPascal(path)}</Link>&nbsp;
+        </small>
+      ))}
 
-        <small>/ {kebabToPascal(pathArray[pathArray.length - 1])}</small>
-      </Flex>
-    )
+      <small>/ {kebabToPascal(pathArray[pathArray.length - 1])}</small>
+    </Styled.Breadcrumbs>
+  ) : (
+    <></>
   );
 };
 
-const Breadcrumbs = () => {
+const Breadcrumbs: React.FC = () => {
   return renderBreadcrumbs();
 };
 
