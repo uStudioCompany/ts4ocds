@@ -27,7 +27,9 @@ const MenuContainer = styled.div`
 
   transition: var(--transition);
 
+  &:hover,
   &:focus-within {
+    opacity: 1;
     pointer-events: auto;
   }
 `;
@@ -58,9 +60,7 @@ const MenuButton = styled.button`
 
   &:hover {
     color: var(--c-neutral);
-  }
 
-  &:focus-within {
     ${MenuIcon} {
       transform: rotate(0deg);
     }
