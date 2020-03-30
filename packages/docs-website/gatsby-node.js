@@ -1,7 +1,16 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+require('ts-node').register();
 
-// You can delete this file if you're not using it
+exports.createPages = require('./src/lib/create-pages').createPages;
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.md$/,
+          use: 'raw-loader',
+        },
+      ],
+    },
+  });
+};

@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "ts4ocds:build": "yarn --cwd ./packages/ts4ocds build",
-    "ts4ocds:deploy": "yarn --cwd ./packages/ts4ocds deploy",
-    "website:start": "yarn --cwd ./packages/docs-website start",
-    "website:build": "yarn --cwd ./packages/docs-website build"
+    "ts4ocds:release": "yarn ts4ocds:build && yarn --cwd ./packages/ts4ocds release",
+    "website:dev": "yarn ts4ocds:build && yarn --cwd ./packages/docs-website dev",
+    "website:deploy": "yarn ts4ocds:build && yarn --cwd ./packages/docs-website deploy"
   },
   "devDependencies": {
     "lerna": "^3.20.2"
