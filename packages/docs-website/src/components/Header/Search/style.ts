@@ -13,7 +13,7 @@ const ResultsContainer = styled.div`
 
   min-height: 1.875rem;
   max-height: 50vh;
-  width: 100%;
+  min-width: 100%;
 
   opacity: 0;
   pointer-events: none;

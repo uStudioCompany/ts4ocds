@@ -41,7 +41,6 @@ const Type = styled(Flex).attrs(() => ({
   color: var(--c-primary);
 
   margin-left: var(--i-small);
-  margin-bottom: 2px;
 `;
 
 export default withDisplayNames({ Property, Name, Description, Type });
