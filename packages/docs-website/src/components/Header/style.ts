@@ -22,6 +22,10 @@ const SiteTitle = styled.h1`
   ${Mixin.Font.h3()};
 
   margin-right: var(--i-large);
+
+  & > *:after {
+    display: none;
+  }
 `;
 
 const ButtonsList = styled.ul`
