@@ -4,7 +4,6 @@ import { Cell } from 'ustudio-ui';
 
 import { ThemeProvider } from 'ustudio-ui/theme';
 import { generateModulesMap, generateReflectionsMap } from '../../api/generator';
-import GlobalStyle from './global-style';
 
 import APIContext from '../../context/APIContext';
 
@@ -37,7 +36,7 @@ const Layout: React.FC = ({ children }) => {
         <Styled.Layout>
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <Styled.Main isContainer lg={{ maxWidth: 1024 }}>
+          <Styled.Main isContainer lg={{ maxWidth: 1024 }} xl={{ maxWidth: 1024 }}>
             <Cell>
               <Styled.Container direction="column">{children}</Styled.Container>
             </Cell>
@@ -54,8 +53,6 @@ const Layout: React.FC = ({ children }) => {
           </footer>
         </Styled.Layout>
       </APIContext.Provider>
-
-      <GlobalStyle />
     </ThemeProvider>
   );
 };

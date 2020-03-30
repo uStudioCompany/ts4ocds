@@ -6,7 +6,7 @@ const renderVariable = ({ name, flags, type }: VariableReflection, index: number
   return (
     <>
       {name}
-      {flags?.isOptional ? '?' : ''}:&nbsp;{renderType(type)}
+      {flags?.isOptional ? '?' : ''}:&#32;{renderType(type)}
       {index < array.length - 1 && <>, </>}
     </>
   );
@@ -14,7 +14,7 @@ const renderVariable = ({ name, flags, type }: VariableReflection, index: number
 
 const mapChildren = (children?: VariableReflection[]): ReactNode => {
   if (children) {
-    return <>{children.map(renderVariable)}&nbsp;</>;
+    return <>{children.map(renderVariable)}&#32;</>;
   }
 
   return '';
@@ -23,7 +23,7 @@ const mapChildren = (children?: VariableReflection[]): ReactNode => {
 const Reflection: React.FC<ObjectType> = (reflection) => {
   return (
     <>
-      {`{`}&nbsp;{mapChildren(reflection.declaration?.children as VariableReflection[] | undefined)}
+      {`{`}&#32;{mapChildren(reflection.declaration?.children as VariableReflection[] | undefined)}
       {`}`}
     </>
   );

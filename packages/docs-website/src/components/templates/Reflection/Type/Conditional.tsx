@@ -9,8 +9,8 @@ const Conditional: React.FC<ConditionalType> = (conditional) => {
       <Flex>
         {conditional.checkType.name} extends {renderType(conditional.extendsType)}
       </Flex>
-      <Flex>?&nbsp;{renderType(conditional.trueType)} </Flex>
-      <Flex>:&nbsp;{renderType(conditional.falseType)}</Flex>
+      <Flex>?&#32;{renderType(conditional.trueType)} </Flex>
+      <Flex>:&#32;{renderType(conditional.falseType)}</Flex>
     </Flex>
   );
 };

@@ -15006,10 +15006,10 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-ustudio-ui@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ustudio-ui/-/ustudio-ui-1.0.0.tgz#98362b3e435b2fc75986a5c6c8b54ef82430d56a"
-  integrity sha512-J/7uyLOZ7aFbXkJcRaZkgSwVFsmaO0D5xB5qw4OINlcuZ0TQWNRLTzYcrz7LiE3Usp+Oa3G0JY9YkYrTL1od1Q==
+ustudio-ui@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ustudio-ui/-/ustudio-ui-1.0.1.tgz#d1a5e0d45132a22c87cdd43d3fc2b72cafbb7522"
+  integrity sha512-ZJn/9prkB0SDI/WvvNV6S1VEr4NIT3R7M7JtayaoyXB0F5qWhhwlL1F393TMRdeqzXJb4mfvdQgjWyi83l98Cg==
   dependencies:
     lodash.merge "^4.6.2"
 

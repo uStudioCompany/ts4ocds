@@ -21,7 +21,7 @@ SiteTitle.displayName = 'SiteTitle';
 const ButtonsList = styled.ul`
   display: flex;
 
-  margin: 0 calc(var(--i-regular) * -1);
+  margin: 0 calc(var(--i-medium) * -1);
 `;
 
 export default { Header, SiteTitle, ButtonsList };

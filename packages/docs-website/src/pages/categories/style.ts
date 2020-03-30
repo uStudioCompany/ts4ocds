@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { Flex } from 'ustudio-ui';
+import { Mixin } from 'ustudio-ui/theme';
 
 const CategoriesList = styled.ul`
   display: grid;
@@ -13,8 +14,8 @@ const Category = styled(Flex)`
   flex: 1;
   padding: var(--i-regular);
 
+  ${Mixin.Style.borderAll({ color: 'var(--c-light)' })};
   border-radius: var(--border-radius);
-  box-shadow: var(--neumo-shadow);
 `;
 Category.displayName = 'Category';
 

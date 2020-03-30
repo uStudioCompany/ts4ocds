@@ -5,13 +5,11 @@ import { Flex, Text } from 'ustudio-ui';
 import { Mixin } from 'ustudio-ui/theme';
 
 const Property = styled(Flex)`
-  width: 100%;
-
   padding: var(--i-regular);
 
+  ${Mixin.Style.borderAll({ color: 'var(--c-light)' })};
   background-color: var(--c-lightest);
   border-radius: var(--border-radius);
-  box-shadow: var(--neumo-shadow);
 `;
 Property.displayName = 'Property';
 
@@ -40,6 +38,7 @@ const Type = styled(Flex).attrs(() => ({
   },
 }))`
   ${Mixin.Font.codeRegular()};
+  white-space: pre-wrap;
 
   color: var(--c-primary);
 

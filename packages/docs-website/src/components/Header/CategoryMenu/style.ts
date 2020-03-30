@@ -47,7 +47,7 @@ const MenuIcon = styled(Caret)`
 const MenuButton = styled.button`
   ${Mixin.Font.bodyRegular()};
   ${Mixin.Style.inputPadding()};
-  margin: 0 var(--i-regular);
+  margin: 0 var(--i-medium);
 
   display: flex;
   align-items: center;
