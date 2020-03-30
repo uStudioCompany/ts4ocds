@@ -21,9 +21,7 @@
   "repository": "github:uStudioCompany/ts4ocds",
   "homepage": "https://github.com/uStudioCompany/ts4ocds",
   "scripts": {
-    "clean": "rimraf docs",
-    "docs": "typedoc",
-    "build": "npm-run-all clean docs -s",
+    "build": "typedoc",
     "prepublishOnly": "copyfiles -u 2 ../../README.md ../../LICENSE ."
   },
   "peerDependencies": {
