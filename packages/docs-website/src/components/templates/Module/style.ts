@@ -29,7 +29,7 @@ const CategoryName = styled.h2`
 
 const ReflectionsList = styled(Grid).attrs(() => ({
   xs: {
-    template: 'repeat(auto-fill, 300px)',
+    template: 'repeat(auto-fit, 300px)',
     alignment: { horizontal: 'center' },
   },
 }))``;

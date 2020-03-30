@@ -8,6 +8,7 @@ import packageJSON from '../../../../ts4ocds/package.json';
 import { modulesMap, reflectionsMap } from '../../api';
 
 import APIContext from '../../context/APIContext';
+import Breadcrumbs from './Breadcrumbs';
 
 import Styled from './style';
 import Header from '../Header';
@@ -40,7 +41,11 @@ const Layout: React.FC = ({ children }) => {
 
           <Styled.Main isContainer lg={{ maxWidth: 1024 }} xl={{ maxWidth: 1024 }}>
             <Cell>
-              <Flex direction="column">{children}</Flex>
+              <Flex direction="column">
+                <Breadcrumbs />
+
+                {children}
+              </Flex>
             </Cell>
           </Styled.Main>
 
