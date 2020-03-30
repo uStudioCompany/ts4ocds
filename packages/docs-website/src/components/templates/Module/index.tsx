@@ -11,6 +11,8 @@ const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) 
 
   return (
     <Layout>
+      <h1>{module.name}</h1>
+
       {(interfaces.length || typeAliases.length) && (
         <Styled.ModulesList>
           {Boolean(interfaces.length) && (

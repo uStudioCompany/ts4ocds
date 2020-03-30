@@ -7,7 +7,9 @@ import { withDisplayNames } from '../../../utils';
 const ModulesList = styled.ul`
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 2rem;
+  grid-gap: var(--i-large);
+
+  margin-top: var(--i-regular);
 `;
 
 const Module = styled(Flex).attrs(() => ({
