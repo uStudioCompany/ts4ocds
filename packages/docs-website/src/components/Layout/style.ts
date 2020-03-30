@@ -15,7 +15,7 @@ const Main = styled(Grid)`
   padding: var(--i-large);
 `;
 
-const Footer = styled(Flex)`
+const Footer = styled.footer`
   padding: var(--i-medium) var(--i-large);
   background-color: var(--c-light);
 `;

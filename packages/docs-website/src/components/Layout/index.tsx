@@ -50,8 +50,8 @@ const Layout: React.FC = ({ children }) => {
             </Cell>
           </Styled.Main>
 
-          <footer>
-            <Styled.Footer alignment={{ horizontal: 'space-between', vertical: 'center' }}>
+          <Styled.Footer>
+            <Flex alignment={{ horizontal: 'space-between', vertical: 'center' }}>
               <small>
                 Released under the MIT License. Copyright © 2020. Made by{' '}
                 <a href="http://ustudio.company/">uStudio Company</a> with love ❤️{' '}
@@ -63,8 +63,8 @@ const Layout: React.FC = ({ children }) => {
                 </a>{' '}
                 v{packageJSON.version}
               </small>
-            </Styled.Footer>
-          </footer>
+            </Flex>
+          </Styled.Footer>
         </Styled.Layout>
       </APIContext.Provider>
 
