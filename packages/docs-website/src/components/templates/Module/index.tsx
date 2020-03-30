@@ -1,4 +1,5 @@
 import React from 'react';
+import { Cell, Flex } from 'ustudio-ui';
 import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../../api/typings';
 import { createUrl } from '../../../utils';
 import Styled from './style';
@@ -13,34 +14,36 @@ const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) 
       {(interfaces.length || typeAliases.length) && (
         <Styled.ModulesList>
           {Boolean(interfaces.length) && (
-            <Styled.Module direction="column" alignment={{ horizontal: 'center' }}>
+            <Styled.Module>
               <Styled.CategoryName>Interfaces</Styled.CategoryName>
 
-              <Styled.ReflectionsList alignment={{ horizontal: 'center' }}>
+              <Styled.ReflectionsList>
                 {interfaces.map((interfaceReflection: InterfaceReflection) => (
-                  <Styled.Reflection
-                    to={createUrl(module.name, interfaceReflection.name)}
-                    key={interfaceReflection.name}
-                  >
-                    {interfaceReflection.name}
-                  </Styled.Reflection>
+                  <Cell key={interfaceReflection.id}>
+                    <Flex alignment={{ horizontal: 'center' }}>
+                      <Styled.Reflection to={createUrl(module.name, interfaceReflection.name)}>
+                        {interfaceReflection.name}
+                      </Styled.Reflection>
+                    </Flex>
+                  </Cell>
                 ))}
               </Styled.ReflectionsList>
             </Styled.Module>
           )}
 
           {Boolean(typeAliases.length) && (
-            <Styled.Module direction="column" alignment={{ horizontal: 'center' }}>
+            <Styled.Module>
               <Styled.CategoryName>Type aliases</Styled.CategoryName>
 
-              <Styled.ReflectionsList alignment={{ horizontal: 'center' }}>
+              <Styled.ReflectionsList>
                 {typeAliases.map((typeAliasReflection: TypeAliasReflection) => (
-                  <Styled.Reflection
-                    to={createUrl(module.name, typeAliasReflection.name)}
-                    key={typeAliasReflection.name}
-                  >
-                    {typeAliasReflection.name}
-                  </Styled.Reflection>
+                  <Cell key={typeAliasReflection.id}>
+                    <Flex alignment={{ horizontal: 'center' }}>
+                      <Styled.Reflection to={createUrl(module.name, typeAliasReflection.name)}>
+                        {typeAliasReflection.name}
+                      </Styled.Reflection>
+                    </Flex>
+                  </Cell>
                 ))}
               </Styled.ReflectionsList>
             </Styled.Module>

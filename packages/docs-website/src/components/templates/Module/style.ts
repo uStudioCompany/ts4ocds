@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Flex } from 'ustudio-ui';
+import { Flex, Grid } from 'ustudio-ui';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../utils';
 
@@ -10,7 +10,10 @@ const ModulesList = styled.ul`
   grid-gap: 2rem;
 `;
 
-const Module = styled(Flex)`
+const Module = styled(Flex).attrs(() => ({
+  direction: 'column',
+  alignment: { horizontal: 'center' },
+}))`
   flex: 1;
   padding: var(--i-regular);
 
@@ -22,10 +25,12 @@ const CategoryName = styled.h2`
   margin-bottom: var(--i-large);
 `;
 
-const ReflectionsList = styled(Flex)`
-  flex-wrap: wrap;
-  align-self: center;
-`;
+const ReflectionsList = styled(Grid).attrs(() => ({
+  xs: {
+    template: 'repeat(auto-fill, 300px)',
+    alignment: { horizontal: 'center' },
+  },
+}))``;
 
 const Reflection = styled(Link)`
   position: relative;
