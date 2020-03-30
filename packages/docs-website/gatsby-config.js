@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/ts4ocds',
   siteMetadata: {
     title: `TS4OCDS`,
     author: `uStudio Front-End Department`,
