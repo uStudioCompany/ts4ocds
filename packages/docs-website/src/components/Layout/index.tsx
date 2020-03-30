@@ -46,16 +46,13 @@ const Layout: React.FC = ({ children }) => {
 
           <footer>
             <Styled.Footer alignment={{ horizontal: 'space-between', vertical: 'center' }}>
-              <span>
-                <Styled.Copyright>©{new Date().getFullYear()}</Styled.Copyright>
-
-                <small>
-                  Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </small>
-              </span>
+              <small>
+                Released under the MIT License. Copyright © 2020. Made by{' '}
+                <a href="http://ustudio.company/">uStudio Company</a> with love ❤️{' '}
+              </small>
 
               <small>
-                <a href="https://github.com/uStudioCompany/ts4ocds" target="_blank">
+                <a href="https://github.com/uStudioCompany/ts4ocds" target="_blank" rel="noopener noreferrer">
                   TS4OCDS
                 </a>{' '}
                 v{packageJSON.version}
