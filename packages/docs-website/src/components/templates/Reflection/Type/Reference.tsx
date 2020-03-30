@@ -5,6 +5,8 @@ import { useModules, useReflections } from '../../../../context/APIContext';
 import { createUrl } from '../../../../utils';
 import { useModule } from '../module-context';
 
+import Styled from '../style';
+
 const renderLink = ({
   reference,
   references,
@@ -22,14 +24,16 @@ const renderLink = ({
    */
   if (!references[reference.id]) {
     if (modules[reference.id]) {
-      return <Link to={createUrl(modules[reference.id].name, reference.name)}>{reference.name}</Link>;
+      return (
+        <Styled.Reference to={createUrl(modules[reference.id].name, reference.name)}>{reference.name}</Styled.Reference>
+      );
     }
 
     /**
      * Where in conditional type reference id is not specified
      */
     if (!reference.id) {
-      return <Link to={createUrl(module, reference.name)}>{reference.name}</Link>;
+      return <Styled.Reference to={createUrl(module, reference.name)}>{reference.name}</Styled.Reference>;
     }
 
     /**
@@ -38,7 +42,11 @@ const renderLink = ({
     return `<${reference.name}>`;
   }
 
-  return <Link to={createUrl(references[reference.id].module, reference.name)}>{reference.name}</Link>;
+  return (
+    <Styled.Reference to={createUrl(references[reference.id].module, reference.name)}>
+      {reference.name}
+    </Styled.Reference>
+  );
 };
 
 const Reference: React.FC<ReferenceType> = (reference) => {
