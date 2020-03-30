@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../utils';
@@ -86,51 +85,4 @@ const MenuItem = styled.li`
   width: 100%;
 `;
 
-const ModuleLink = styled(Link)`
-  display: block;
-  width: 100%;
-
-  position: relative;
-  overflow: hidden;
-
-  padding: var(--i-medium) var(--i-regular);
-  color: var(--c-primary);
-
-  transition: var(--transition);
-
-  &:hover {
-    &:before {
-      background-color: var(--c-primary);
-    }
-  }
-
-  &:active {
-    &:before {
-      background-color: var(--c-primary-light);
-    }
-  }
-
-  &:focus {
-    color: var(--c-darkest);
-  }
-
-  &:before {
-    content: '';
-    opacity: 0.1;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    transition: var(--transition);
-  }
-
-  &:after {
-    display: none;
-  }
-`;
-
-export default withDisplayNames({ ButtonContainer, MenuIcon, MenuButton, MenuContainer, Menu, MenuItem, ModuleLink });
+export default withDisplayNames({ ButtonContainer, MenuIcon, MenuButton, MenuContainer, Menu, MenuItem });
