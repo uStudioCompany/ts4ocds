@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React, { ReactNode } from 'react';
-import { ModulesMap, Reference as ReferenceType, ReflectionsMap } from '../../../../api/schema';
+import { ModulesMap, Reference as ReferenceType, ReflectionsMap } from '../../../../api/typings';
 import { useModules, useReflections } from '../../../../context/APIContext';
 import { useModule } from '../module-context';
 

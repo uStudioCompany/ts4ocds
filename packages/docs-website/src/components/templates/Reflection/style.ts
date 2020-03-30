@@ -1,11 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import { Flex } from 'ustudio-ui';
-
-const Reflection = styled(Flex)`
-  width: 100%;
-`;
-Reflection.displayName = 'Reflection';
+import { withDisplayNames } from '../../../utils';
 
 const PropertyList = styled.ul`
   display: grid;
@@ -14,11 +9,9 @@ const PropertyList = styled.ul`
 
   margin-top: var(--i-large);
 `;
-PropertyList.displayName = 'PropertyList';
 
 const Description = styled(ReactMarkdown)`
   color: var(--c-dark);
 `;
-Description.displayName = 'Description';
 
-export default { Reflection, PropertyList, Description };
+export default withDisplayNames({ PropertyList, Description });

@@ -1,6 +1,6 @@
 import React from 'react';
-import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../../api/schema';
-import StyledCategory from '../../../pages/categories/style';
+import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../../api/typings';
+import Styled from './style';
 import Layout from '../../Layout';
 
 const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) => {
@@ -10,41 +10,35 @@ const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) 
   return (
     <Layout>
       {(interfaces.length || typeAliases.length) && (
-        <StyledCategory.CategoriesList>
+        <Styled.ModulesList>
           {Boolean(interfaces.length) && (
-            <StyledCategory.Category direction="column" alignment={{ horizontal: 'center' }}>
-              <StyledCategory.CategoryName>Interfaces</StyledCategory.CategoryName>
+            <Styled.Module direction="column" alignment={{ horizontal: 'center' }}>
+              <Styled.CategoryName>Interfaces</Styled.CategoryName>
 
-              <StyledCategory.ModulesList alignment={{ horizontal: 'center' }}>
+              <Styled.ReflectionsList alignment={{ horizontal: 'center' }}>
                 {interfaces.map((interfaceReflection: InterfaceReflection) => (
-                  <StyledCategory.Module
-                    to={`/${module.name}/${interfaceReflection.name}`}
-                    key={interfaceReflection.name}
-                  >
+                  <Styled.Reflection to={`/${module.name}/${interfaceReflection.name}`} key={interfaceReflection.name}>
                     {interfaceReflection.name}
-                  </StyledCategory.Module>
+                  </Styled.Reflection>
                 ))}
-              </StyledCategory.ModulesList>
-            </StyledCategory.Category>
+              </Styled.ReflectionsList>
+            </Styled.Module>
           )}
 
           {Boolean(typeAliases.length) && (
-            <StyledCategory.Category direction="column" alignment={{ horizontal: 'center' }}>
-              <StyledCategory.CategoryName>Type aliases</StyledCategory.CategoryName>
+            <Styled.Module direction="column" alignment={{ horizontal: 'center' }}>
+              <Styled.CategoryName>Type aliases</Styled.CategoryName>
 
-              <StyledCategory.ModulesList alignment={{ horizontal: 'center' }}>
+              <Styled.ReflectionsList alignment={{ horizontal: 'center' }}>
                 {typeAliases.map((typeAliasReflection: TypeAliasReflection) => (
-                  <StyledCategory.Module
-                    to={`/${module.name}/${typeAliasReflection.name}`}
-                    key={typeAliasReflection.name}
-                  >
+                  <Styled.Reflection to={`/${module.name}/${typeAliasReflection.name}`} key={typeAliasReflection.name}>
                     {typeAliasReflection.name}
-                  </StyledCategory.Module>
+                  </Styled.Reflection>
                 ))}
-              </StyledCategory.ModulesList>
-            </StyledCategory.Category>
+              </Styled.ReflectionsList>
+            </Styled.Module>
           )}
-        </StyledCategory.CategoriesList>
+        </Styled.ModulesList>
       )}
     </Layout>
   );

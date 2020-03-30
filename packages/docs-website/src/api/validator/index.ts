@@ -1,2 +1,2 @@
-export * from './kind-validator';
-export * from './type-validator';
+export * from './kind.validator';
+export * from './type.validator';

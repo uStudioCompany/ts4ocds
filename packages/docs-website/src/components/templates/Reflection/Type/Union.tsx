@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { v4 } from 'uuid';
-import { IntersectionType, UnionType } from '../../../../api/schema';
+import { IntersectionType, UnionType } from '../../../../api/typings';
 import { isIntrinsic } from '../../../../api/validator';
 import Reference from './Reference';
 import Reflection from './Reflection';

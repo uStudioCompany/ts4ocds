@@ -1,9 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Cell } from 'ustudio-ui';
-
+import { Cell, Flex } from 'ustudio-ui';
 import { ThemeProvider } from 'ustudio-ui/theme';
-import { generateModulesMap, generateReflectionsMap } from '../../api/generator';
+
+import packageJSON from '../../../../ts4ocds/package.json';
+
+import { modulesMap, reflectionsMap } from '../../api';
 
 import APIContext from '../../context/APIContext';
 
@@ -29,8 +31,8 @@ const Layout: React.FC = ({ children }) => {
     >
       <APIContext.Provider
         value={{
-          reflections: generateReflectionsMap(),
-          modules: generateModulesMap(),
+          reflections: reflectionsMap,
+          modules: modulesMap,
         }}
       >
         <Styled.Layout>
@@ -38,16 +40,25 @@ const Layout: React.FC = ({ children }) => {
 
           <Styled.Main isContainer lg={{ maxWidth: 1024 }} xl={{ maxWidth: 1024 }}>
             <Cell>
-              <Styled.Container direction="column">{children}</Styled.Container>
+              <Flex direction="column">{children}</Flex>
             </Cell>
           </Styled.Main>
 
           <footer>
-            <Styled.Footer>
-              <Styled.Copyright>©{new Date().getFullYear()}</Styled.Copyright>
+            <Styled.Footer alignment={{ horizontal: 'space-between', vertical: 'center' }}>
+              <span>
+                <Styled.Copyright>©{new Date().getFullYear()}</Styled.Copyright>
+
+                <small>
+                  Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+                </small>
+              </span>
 
               <small>
-                Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+                <a href="https://github.com/uStudioCompany/ts4ocds" target="_blank">
+                  TS4OCDS
+                </a>{' '}
+                v{packageJSON.version}
               </small>
             </Styled.Footer>
           </footer>

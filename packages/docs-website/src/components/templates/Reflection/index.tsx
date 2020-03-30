@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
+import { Flex } from 'ustudio-ui';
 import { hasTypeParameter, isInterface } from '../../../api/validator';
-import { Reflection, Property as PropertyType, TypeAliasReflection } from '../../../api/schema';
+import { Reflection, Property as PropertyType, TypeAliasReflection, InterfaceReflection } from '../../../api/typings';
 import Layout from '../../Layout';
 import Property from './Property';
 import ModuleContext from './module-context';
@@ -18,25 +19,22 @@ const renderProperty = (property: TypeAliasReflection | PropertyType): ReactNode
   );
 };
 
-const mapProperties = (reflection: Reflection) => {
-  return (
-    isInterface(reflection) &&
-    reflection.children
-      .sort((a, b) => {
-        if (a.flags?.isOptional) return 1;
+const mapProperties = (reflection: InterfaceReflection): ReactNode[] => {
+  return reflection.children
+    .sort((a, b) => {
+      if (a.flags?.isOptional) return 1;
 
-        if (b.flags?.isOptional) return -1;
+      if (b.flags?.isOptional) return -1;
 
-        return 0;
-      })
-      .map((property) => <li key={property.name}>{renderProperty(property)}</li>)
-  );
+      return 0;
+    })
+    .map((property) => <li key={property.name}>{renderProperty(property)}</li>);
 };
 
 const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext: reflection }) => {
   return (
     <Layout>
-      <Styled.Reflection direction="column">
+      <Flex direction="column">
         <h1>{reflection.name}</h1>
 
         {reflection?.comment && <Styled.Description source={reflection.comment.shortText} />}
@@ -51,9 +49,7 @@ const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext
           )}
 
           <Styled.PropertyList>
-            {/* eslint-disable-next-line @typescript-eslint/ban-ts-ignore */}
-            {// @ts-ignore
-            isInterface(reflection)
+            {isInterface(reflection)
               ? mapProperties(reflection)
               : renderProperty({
                   ...reflection,
@@ -61,7 +57,7 @@ const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext
                 })}
           </Styled.PropertyList>
         </ModuleContext.Provider>
-      </Styled.Reflection>
+      </Flex>
     </Layout>
   );
 };

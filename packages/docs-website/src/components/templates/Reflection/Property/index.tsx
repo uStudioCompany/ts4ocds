@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Badge } from 'ustudio-ui';
-import { Type } from '../../../../api/schema';
+import { Type } from '../../../../api/typings';
 import Styled from './style';
 
 import { renderType } from '../Type';

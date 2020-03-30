@@ -1,7 +1,7 @@
 import { Actions, GatsbyNode } from 'gatsby';
 import { resolve } from 'path';
-import { generateReflectionsMap } from '../api/generator';
-import { Module } from '../api/schema';
+import { reflectionsMap } from '../api/generator';
+import { Module } from '../api/typings';
 import categories from './categories';
 
 const createModulePage = (createPage: Actions['createPage']) => (module: Module) =>
@@ -12,7 +12,7 @@ const createModulePage = (createPage: Actions['createPage']) => (module: Module)
   });
 
 export const createPages: GatsbyNode['createPages'] = ({ actions: { createPage } }) => {
-  Object.values(generateReflectionsMap()).forEach((reflection) => {
+  Object.values(reflectionsMap).forEach((reflection) => {
     createPage({
       path: `/${reflection.module}/${reflection.name}`,
       component: resolve('./src/components/templates/Reflection/index.tsx'),

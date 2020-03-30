@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { Flex, Text } from 'ustudio-ui';
 import { Mixin } from 'ustudio-ui/theme';
+import { withDisplayNames } from '../../../../utils';
 
 const Property = styled(Flex)`
   padding: var(--i-regular);
@@ -11,14 +12,12 @@ const Property = styled(Flex)`
   background-color: var(--c-lightest);
   border-radius: var(--border-radius);
 `;
-Property.displayName = 'Property';
 
 const Name = styled(Text).attrs(() => ({
   appearance: 'bold',
 }))`
   margin-right: var(--i-medium);
 `;
-Name.displayName = 'Name';
 
 const Description = styled(ReactMarkdown).attrs(() => ({
   renderers: {
@@ -30,7 +29,6 @@ const Description = styled(ReactMarkdown).attrs(() => ({
 
   margin-top: var(--i-small);
 `;
-Description.displayName = 'Description';
 
 const Type = styled(Flex).attrs(() => ({
   alignment: {
@@ -45,6 +43,5 @@ const Type = styled(Flex).attrs(() => ({
   margin-left: var(--i-small);
   margin-bottom: 2px;
 `;
-Type.displayName = 'Type';
 
-export default { Property, Name, Description, Type };
+export default withDisplayNames({ Property, Name, Description, Type });

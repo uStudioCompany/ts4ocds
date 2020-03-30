@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Type } from '../../../../api/schema';
+import { Type } from '../../../../api/typings';
 import Conditional from './Conditional';
 import IndexedAccess from './IndexedAccess';
 import Reference from './Reference';

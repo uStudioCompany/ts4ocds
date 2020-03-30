@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ObjectType, VariableReflection } from '../../../../api/schema';
+import { ObjectType, VariableReflection } from '../../../../api/typings';
 import renderType from './render-type';
 
 const renderVariable = ({ name, flags, type }: VariableReflection, index: number, array: VariableReflection[]) => {

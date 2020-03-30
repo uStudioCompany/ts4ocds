@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import { ModulesMap, ReflectionsMap } from '../api/schema';
+import { ModulesMap, ReflectionsMap } from '../api/typings';
 
 const APIContext = createContext({} as { reflections: ReflectionsMap; modules: ModulesMap });
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex } from 'ustudio-ui';
-import { Conditional as ConditionalType } from '../../../../api/schema';
+import { Conditional as ConditionalType } from '../../../../api/typings';
 import { renderType } from './index';
 
 const Conditional: React.FC<ConditionalType> = (conditional) => {

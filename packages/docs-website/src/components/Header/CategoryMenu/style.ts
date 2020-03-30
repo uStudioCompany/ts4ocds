@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { Mixin } from 'ustudio-ui/theme';
+import { withDisplayNames } from '../../../utils';
 import Caret from './Caret';
 
 const ButtonContainer = styled.div`
@@ -132,4 +133,4 @@ const ModuleLink = styled(Link)`
   }
 `;
 
-export default { ButtonContainer, MenuIcon, MenuButton, MenuContainer, Menu, MenuItem, ModuleLink };
+export default withDisplayNames({ ButtonContainer, MenuIcon, MenuButton, MenuContainer, Menu, MenuItem, ModuleLink });
