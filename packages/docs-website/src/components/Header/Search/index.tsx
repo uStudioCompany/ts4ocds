@@ -2,6 +2,7 @@ import React, { ReactNode, useMemo, useState } from 'react';
 import { TextInput, Text } from 'ustudio-ui';
 import { Module, Reflection } from '../../../api/typings';
 import { useModules, useReflections } from '../../../context/APIContext';
+import { createUrl } from '../../../utils';
 import Styled from './style';
 import StyledHeader from '../style';
 
@@ -29,7 +30,7 @@ const renderModules = (modules: Partial<Module>[]): ReactNode => {
       {modules.map(({ name }) => {
         return (
           <li key={name}>
-            <StyledHeader.ModuleLink to={`/${name}`}>{name}</StyledHeader.ModuleLink>
+            <StyledHeader.ModuleLink to={createUrl(name)}>{name}</StyledHeader.ModuleLink>
           </li>
         );
       })}
@@ -47,7 +48,7 @@ const renderReflections = (reflections: Partial<Reflection>[]): ReactNode => {
       {reflections.map(({ name, module }) => {
         return (
           <li key={name}>
-            <StyledHeader.ModuleLink to={`/${module}/${name}`}>{name}</StyledHeader.ModuleLink>
+            <StyledHeader.ModuleLink to={createUrl(module, name)}>{name}</StyledHeader.ModuleLink>
           </li>
         );
       })}

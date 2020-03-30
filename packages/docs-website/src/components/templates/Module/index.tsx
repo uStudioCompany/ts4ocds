@@ -1,5 +1,6 @@
 import React from 'react';
 import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../../api/typings';
+import { createUrl } from '../../../utils';
 import Styled from './style';
 import Layout from '../../Layout';
 
@@ -17,7 +18,10 @@ const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) 
 
               <Styled.ReflectionsList alignment={{ horizontal: 'center' }}>
                 {interfaces.map((interfaceReflection: InterfaceReflection) => (
-                  <Styled.Reflection to={`/${module.name}/${interfaceReflection.name}`} key={interfaceReflection.name}>
+                  <Styled.Reflection
+                    to={createUrl(module.name, interfaceReflection.name)}
+                    key={interfaceReflection.name}
+                  >
                     {interfaceReflection.name}
                   </Styled.Reflection>
                 ))}
@@ -31,7 +35,10 @@ const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) 
 
               <Styled.ReflectionsList alignment={{ horizontal: 'center' }}>
                 {typeAliases.map((typeAliasReflection: TypeAliasReflection) => (
-                  <Styled.Reflection to={`/${module.name}/${typeAliasReflection.name}`} key={typeAliasReflection.name}>
+                  <Styled.Reflection
+                    to={createUrl(module.name, typeAliasReflection.name)}
+                    key={typeAliasReflection.name}
+                  >
                     {typeAliasReflection.name}
                   </Styled.Reflection>
                 ))}

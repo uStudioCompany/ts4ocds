@@ -1,4 +1,5 @@
 import React from 'react';
+import { createUrl } from '../../../utils';
 
 import Styled from './style';
 import StyledHeader from '../style';
@@ -14,7 +15,7 @@ const CategoryMenu: React.FC<{ name: string; modules: string[] }> = ({ name, mod
         <Styled.Menu>
           {modules.map((module: string) => (
             <Styled.MenuItem key={module}>
-              <StyledHeader.ModuleLink to={`/${module}`}>{module}</StyledHeader.ModuleLink>
+              <StyledHeader.ModuleLink to={createUrl(module)}>{module}</StyledHeader.ModuleLink>
             </Styled.MenuItem>
           ))}
         </Styled.Menu>
