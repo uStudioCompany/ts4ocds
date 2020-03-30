@@ -9,17 +9,15 @@ import Styled from './style';
 const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => (
   <Styled.Header>
     <Styled.Nav>
-      <Styled.SiteTitle>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </Styled.SiteTitle>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        <Styled.SiteTitle>{siteTitle}</Styled.SiteTitle>
+      </Link>
 
       <Styled.ButtonsList>
         {Object.keys(categories).map((category) => (
