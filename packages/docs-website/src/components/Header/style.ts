@@ -17,14 +17,17 @@ const Nav = styled.nav`
   align-items: center;
 `;
 
-const SiteTitle = styled.h1`
-  ${Mixin.Font.h3()};
-
+const SiteTitleLink = styled(Link)`
+  color: var(--c-lightest);
   margin-right: var(--i-large);
 
-  & > *:after {
+  &:after {
     display: none;
   }
+`;
+
+const SiteTitle = styled.h1`
+  ${Mixin.Font.h3()};
 `;
 
 const ButtonsList = styled.ul`
@@ -80,4 +83,4 @@ const ModuleLink = styled(Link)`
   }
 `;
 
-export default withDisplayNames({ Header, Nav, SiteTitle, ButtonsList, ModuleLink });
+export default withDisplayNames({ Header, Nav, SiteTitle, SiteTitleLink, ButtonsList, ModuleLink });

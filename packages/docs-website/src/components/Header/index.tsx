@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import categories from '../../lib/categories';
 import CategoryMenu from './CategoryMenu';
 import Search from './Search';
@@ -9,15 +8,9 @@ import Styled from './style';
 const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => (
   <Styled.Header>
     <Styled.Nav>
-      <Link
-        to="/"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      >
+      <Styled.SiteTitleLink to="/">
         <Styled.SiteTitle>{siteTitle}</Styled.SiteTitle>
-      </Link>
+      </Styled.SiteTitleLink>
 
       <Styled.ButtonsList>
         {Object.keys(categories).map((category) => (
