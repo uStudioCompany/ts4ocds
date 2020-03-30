@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { Helmet } from 'react-helmet';
 import { Flex } from 'ustudio-ui';
 import { hasTypeParameter, isInterface } from '../../../api/validator';
 import { Reflection, Property as PropertyType, TypeAliasReflection, InterfaceReflection } from '../../../api/typings';
@@ -34,32 +35,38 @@ const mapProperties = (reflection: InterfaceReflection): ReactNode[] => {
 
 const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext: reflection }) => {
   return (
-    <Layout>
-      <Flex direction="column">
-        <h1>{reflection.name}</h1>
+    <>
+      <Helmet>
+        <title>{`${reflection.module} - ${reflection.name}`}</title>
+      </Helmet>
 
-        {reflection?.comment && <Styled.Description source={reflection.comment.shortText} />}
+      <Layout>
+        <Flex direction="column">
+          <h1>{reflection.name}</h1>
 
-        <ModuleContext.Provider value={{ module: reflection.module }}>
-          {hasTypeParameter(reflection) && (
+          {reflection?.comment && <Styled.Description source={reflection.comment.shortText} />}
+
+          <ModuleContext.Provider value={{ module: reflection.module }}>
+            {hasTypeParameter(reflection) && (
+              <Styled.PropertyList>
+                {reflection.typeParameter?.map((tp) => (
+                  <Property name={`<${tp.name}>`} description="Type parameter" type={tp.type} key={tp.id} />
+                ))}
+              </Styled.PropertyList>
+            )}
+
             <Styled.PropertyList>
-              {reflection.typeParameter?.map((tp) => (
-                <Property name={`<${tp.name}>`} description="Type parameter" type={tp.type} key={tp.id} />
-              ))}
+              {isInterface(reflection)
+                ? mapProperties(reflection)
+                : renderProperty({
+                    ...reflection,
+                    comment: undefined,
+                  })}
             </Styled.PropertyList>
-          )}
-
-          <Styled.PropertyList>
-            {isInterface(reflection)
-              ? mapProperties(reflection)
-              : renderProperty({
-                  ...reflection,
-                  comment: undefined,
-                })}
-          </Styled.PropertyList>
-        </ModuleContext.Provider>
-      </Flex>
-    </Layout>
+          </ModuleContext.Provider>
+        </Flex>
+      </Layout>
+    </>
   );
 };
 
