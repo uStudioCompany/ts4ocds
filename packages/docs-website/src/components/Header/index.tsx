@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Drawer } from 'ustudio-ui';
 import { useMediaQuery } from 'ustudio-ui/hooks';
 import categories from '../../lib/categories';
 import CategoryMenu from './CategoryMenu';
@@ -7,7 +6,7 @@ import Search from './Search';
 
 import Styled from './style';
 
-const Navigation = () => (
+const Navigation: React.FC = () => (
   <Styled.ButtonsList>
     {Object.keys(categories).map((category) => (
       <li key={category}>
