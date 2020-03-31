@@ -1,6 +1,17 @@
 import React, { ReactNode } from 'react';
-import { ObjectType, VariableReflection } from '../../../../api/typings';
+import { IndexSignatureType, ObjectType, VariableReflection } from '../../../../api/typings';
 import renderType from './render-type';
+
+const renderIndexSignature = (reflection: IndexSignatureType) => {
+  const indexSignature = reflection.declaration.indexSignature[0];
+  const parameter = indexSignature.parameters[0];
+
+  return (
+    <>
+      [{parameter.name}: {renderType(parameter.type)}]: {renderType(indexSignature.type)}
+    </>
+  );
+};
 
 const renderVariable = ({ name, flags, type }: VariableReflection, index: number, array: VariableReflection[]) => {
   return (
@@ -12,7 +23,7 @@ const renderVariable = ({ name, flags, type }: VariableReflection, index: number
   );
 };
 
-const mapChildren = (children?: VariableReflection[]): ReactNode => {
+const mapVariables = (children?: VariableReflection[]): ReactNode => {
   if (children) {
     return <>{children.map(renderVariable)}&#32;</>;
   }
@@ -20,11 +31,15 @@ const mapChildren = (children?: VariableReflection[]): ReactNode => {
   return '';
 };
 
-const Reflection: React.FC<ObjectType> = (reflection) => {
+const Reflection: React.FC<IndexSignatureType | ObjectType> = (reflection) => {
+  console.log(reflection);
   return (
     <>
-      {`{`}&#32;{mapChildren(reflection.declaration?.children as VariableReflection[] | undefined)}
-      {`}`}
+      {`{ `}
+      {(reflection as ObjectType).declaration?.children
+        ? mapVariables((reflection as ObjectType).declaration?.children as VariableReflection[] | undefined)
+        : renderIndexSignature(reflection as IndexSignatureType)}
+      {` }`}
     </>
   );
 };
