@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../utils';
 
 const ResultsContainer = styled.div`
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   right: 0;
 
-  z-index: var(--l-top);
+  z-index: calc(var(--l-topmost) + 2);
 
   overflow-x: auto;
 
   min-height: 1.875rem;
-  max-height: 50vh;
+  max-height: 25vh;
   min-width: 100%;
 
   opacity: 0;
@@ -24,14 +24,22 @@ const ResultsContainer = styled.div`
 
   transition: var(--transition);
 
+  &:active,
   &:focus-within {
     pointer-events: auto;
   }
+
+  ${Mixin.Screen.md(css`
+    top: 100%;
+    bottom: unset;
+
+    max-height: 50vh;
+  `)}
 `;
 
 const SearchContainer = styled.div`
   position: relative;
-  flex: 0.33;
+  flex: 0.5;
 
   &:focus-within {
     ${ResultsContainer} {
@@ -39,6 +47,10 @@ const SearchContainer = styled.div`
       pointer-events: auto;
     }
   }
+
+  ${Mixin.Screen.lg(css`
+    flex: 0.33;
+  `)}
 `;
 
 const NoResults = styled.small`

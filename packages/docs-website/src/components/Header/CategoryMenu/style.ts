@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../utils';
 import Caret from './Caret';
@@ -9,14 +9,16 @@ const ButtonContainer = styled.div`
 
 const MenuContainer = styled.div`
   position: absolute;
-  top: 100%;
-  left: 0;
+  bottom: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
 
   z-index: var(--l-top);
 
   overflow-x: auto;
 
-  max-height: 50vh;
+  max-height: 25vh;
 
   opacity: 0;
   pointer-events: none;
@@ -32,12 +34,23 @@ const MenuContainer = styled.div`
     opacity: 1;
     pointer-events: auto;
   }
+
+  ${Mixin.Screen.md(css`
+    top: 100%;
+    left: 0;
+    bottom: unset;
+
+    transform: translateX(0);
+
+    max-height: 50vh;
+  `)}
 `;
 
 const MenuIcon = styled(Caret)`
   width: 12px;
   height: 12px;
 
+  margin-top: 3px;
   margin-left: var(--i-regular);
 
   transform: rotate(-180deg);
@@ -49,7 +62,7 @@ const MenuIcon = styled(Caret)`
 const MenuButton = styled.button`
   ${Mixin.Font.bodyRegular()};
   ${Mixin.Style.inputPadding()};
-  margin: 0 var(--i-medium);
+  margin: var(--i-medium) 0;
 
   display: flex;
   align-items: center;
@@ -70,6 +83,10 @@ const MenuButton = styled.button`
       pointer-events: auto;
     }
   }
+
+  ${Mixin.Screen.md(css`
+    margin: 0 var(--i-medium);
+  `)}
 `;
 
 const Menu = styled.ul`
