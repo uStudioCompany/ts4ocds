@@ -2,9 +2,12 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import { globalHistory } from '@reach/router';
+import config from '../../../../gatsby-config.js';
 import categories from '../../../lib/categories';
 
 import Styled from './style';
+
+const includesPrefix = (pathArray: string[]): boolean => pathArray.includes(config.pathPrefix.slice(1));
 
 const getFullLink = (path: string, pathArray: string[]): string => {
   return pathArray.slice(0, pathArray.indexOf(path) - 1).join('/');
@@ -19,7 +22,8 @@ const whichCategory = (path: string): 'Standard' | 'Extensions' => {
 };
 
 const renderBreadcrumbs = () => {
-  const pathArray = globalHistory.location.pathname.split('/').filter(Boolean);
+  const filteredPathArray = globalHistory.location.pathname.split('/').filter(Boolean);
+  const pathArray = includesPrefix(filteredPathArray) ? filteredPathArray.slice(1) : filteredPathArray;
 
   return pathArray.length ? (
     <Styled.Breadcrumbs>
