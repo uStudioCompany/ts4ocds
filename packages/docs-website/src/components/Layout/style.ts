@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { Flex, Grid } from 'ustudio-ui';
+import styled, { css } from 'styled-components';
+import { Grid } from 'ustudio-ui';
+import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../utils';
 
 const Layout = styled.main`
@@ -12,16 +13,36 @@ const Layout = styled.main`
 const Main = styled(Grid)`
   flex: 1;
 
-  padding: var(--i-large);
+  padding: var(--i-large) var(--i-large) 49px;
+
+  ${Mixin.Screen.md(css`
+    padding: calc(49px + var(--i-large)) var(--i-large) var(--i-large);
+  `)}
 `;
 
 const Footer = styled.footer`
+  display: flex;
+
+  text-align: center;
+
+  margin-bottom: 49px;
   padding: var(--i-medium) var(--i-large);
+
   background-color: var(--c-light);
+
+  ${Mixin.Screen.md(css`
+    text-align: left;
+
+    margin-bottom: 0;
+  `)}
 `;
 
 const Copyright = styled.small`
-  margin-right: var(--i-medium);
+  margin-bottom: var(--i-medium);
+
+  ${Mixin.Screen.md(css`
+    margin-bottom: 0;
+  `)}
 `;
 
 export default withDisplayNames({ Layout, Main, Footer, Copyright });
