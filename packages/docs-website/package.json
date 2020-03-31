@@ -2,10 +2,11 @@
   "name": "ts4ocds-website",
   "version": "1.0.0",
   "scripts": {
+    "clean": "gatsby clean",
     "copy-readme": "copyfiles -u 2 ../../README.md .",
-    "build": "yarn copy-readme && gatsby build --prefix-paths",
+    "build": "yarn clean && yarn copy-readme && gatsby build",
     "deploy": "yarn build && gh-pages -d public",
-    "dev": "yarn copy-readme && gatsby develop"
+    "dev": "yarn clean && yarn copy-readme && gatsby develop"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",

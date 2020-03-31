@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Flex, Grid } from 'ustudio-ui';
+import { Flex } from 'ustudio-ui';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../utils';
 
@@ -27,7 +27,7 @@ const CategoryName = styled.h2`
   margin-bottom: var(--i-large);
 `;
 
-const ReflectionsList = styled(Grid).attrs(() => ({
+const ReflectionsList = styled.ul.attrs(() => ({
   xs: {
     template: 'repeat(auto-fit, 300px)',
     alignment: { horizontal: 'center' },

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Cell, Flex } from 'ustudio-ui';
 import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../../api/typings';
 import { createUrl } from '../../../utils';
 import Styled from './style';
@@ -27,13 +26,11 @@ const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) 
 
                 <Styled.ReflectionsList>
                   {interfaces.map((interfaceReflection: InterfaceReflection) => (
-                    <Cell key={interfaceReflection.id}>
-                      <Flex alignment={{ horizontal: 'center' }}>
-                        <Styled.Reflection to={createUrl(module.name, interfaceReflection.name)}>
-                          {interfaceReflection.name}
-                        </Styled.Reflection>
-                      </Flex>
-                    </Cell>
+                    <li key={interfaceReflection.id}>
+                      <Styled.Reflection to={createUrl(module.name, interfaceReflection.name)}>
+                        {interfaceReflection.name}
+                      </Styled.Reflection>
+                    </li>
                   ))}
                 </Styled.ReflectionsList>
               </Styled.Module>
@@ -45,13 +42,11 @@ const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) 
 
                 <Styled.ReflectionsList>
                   {typeAliases.map((typeAliasReflection: TypeAliasReflection) => (
-                    <Cell key={typeAliasReflection.id}>
-                      <Flex alignment={{ horizontal: 'center' }}>
-                        <Styled.Reflection to={createUrl(module.name, typeAliasReflection.name)}>
-                          {typeAliasReflection.name}
-                        </Styled.Reflection>
-                      </Flex>
-                    </Cell>
+                    <li key={typeAliasReflection.id}>
+                      <Styled.Reflection to={createUrl(module.name, typeAliasReflection.name)}>
+                        {typeAliasReflection.name}
+                      </Styled.Reflection>
+                    </li>
                   ))}
                 </Styled.ReflectionsList>
               </Styled.Module>

@@ -1,1 +1,1 @@
-import './src/styles/fonts.css';
+require('./src/styles/fonts.css');
