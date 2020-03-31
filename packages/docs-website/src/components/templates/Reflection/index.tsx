@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import { Flex } from 'ustudio-ui';
+import { useMediaQuery } from 'ustudio-ui/hooks';
 import { hasTypeParameter, isInterface } from '../../../api/validator';
 import { Reflection, Property as PropertyType, TypeAliasReflection, InterfaceReflection } from '../../../api/typings';
 import Layout from '../../Layout';
@@ -34,6 +35,8 @@ const mapProperties = (reflection: InterfaceReflection): ReactNode[] => {
 };
 
 const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext: reflection }) => {
+  const isMd = useMediaQuery('screen and (min-width: 768px)');
+
   return (
     <>
       <Helmet>
@@ -42,7 +45,7 @@ const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext
 
       <Layout>
         <Flex direction="column">
-          <h1>{reflection.name}</h1>
+          {isMd ? <h1>{reflection.name}</h1> : <h4>{reflection.name}</h4>}
 
           {reflection?.comment && <Styled.Description source={reflection.comment.shortText} />}
 
