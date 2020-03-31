@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "copy-readme": "copyfiles -u 2 ../../README.md .",
-    "build": "yarn clean && yarn copy-readme && gatsby build",
+    "build": "yarn clean && yarn copy-readme && gatsby build --prefix-paths",
     "deploy": "yarn build && gh-pages -d public",
     "dev": "yarn clean && yarn copy-readme && gatsby develop"
   },
