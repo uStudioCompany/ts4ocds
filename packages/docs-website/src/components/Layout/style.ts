@@ -26,6 +26,7 @@ const Main = styled(Flex)`
 
 const Footer = styled.footer`
   display: flex;
+  width: 100%;
 
   text-align: center;
 
