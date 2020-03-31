@@ -41,6 +41,8 @@ const Root = styled(Flex)`
 `;
 
 const renderers: Renderers = {
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
+  link: (props) => <a {...props} target="_blank" rel="noreferrer noopener" />,
   heading: ({ level, children }) => <Heading variant={`h${level}` as 'h1'}>{children}</Heading>,
   inlineCode: (props) => (
     <InlineCode appearance={{ background: 'var(--c-light)', color: 'var(--c-darkest)' }} {...props} />

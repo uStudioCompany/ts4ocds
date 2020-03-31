@@ -33,7 +33,7 @@ const renderNode = (separator: '|' | '&') => (node: ReactNode, index: number, ar
   return (
     <React.Fragment key={v4()}>
       {node}
-      {index < array.length - 1 && <>&nbsp;{separator}&#32;</>}
+      {index < array.length - 1 && <>{` ${separator} `}</>}
     </React.Fragment>
   );
 };

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import ReactMarkdown from 'react-markdown';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Flex, Text } from 'ustudio-ui';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../../utils';
@@ -23,6 +23,8 @@ const Description = styled(ReactMarkdown).attrs(() => ({
   renderers: {
     paragraph: ({ children }): ReactElement => <Text variant="small">{children}</Text>,
     strong: ({ children }): ReactElement => <Text variant="small">{children}</Text>,
+    // eslint-disable-next-line jsx-a11y/anchor-has-content
+    link: (props) => <a {...props} target="_blank" rel="noreferrer noopener" />,
   },
 }))`
   color: var(--c-dark);
@@ -37,10 +39,24 @@ const Type = styled(Flex).attrs(() => ({
 }))`
   ${Mixin.Font.codeRegular()};
   white-space: pre-wrap;
+  flex-wrap: wrap;
 
   color: var(--c-primary-light);
 
-  margin-left: var(--i-small);
+  margin-top: var(--i-small);
+
+  ${Mixin.Screen.xs(css`
+    margin-left: var(--i-small);
+    margin-top: 0;
+  `)}
 `;
 
-export default withDisplayNames({ Property, Name, Description, Type });
+const Meta = styled(Flex)`
+  flex-wrap: wrap;
+
+  ${Mixin.Screen.xs(css`
+    flex-wrap: nowrap;
+  `)}
+`;
+
+export default withDisplayNames({ Property, Name, Description, Type, Meta });

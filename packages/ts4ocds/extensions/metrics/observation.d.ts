@@ -31,7 +31,7 @@ interface BaseObservation {
    * Any number of dimensions can be recorded within this object.
    * Dimensions names should follow the camelCase conventions of OCDS.
    */
-  dimensions: Record<string, string>;
+  dimensions: { [dimension: string]: string };
   /**
    * Any notes on this observation.
    * This may include clarifying information.

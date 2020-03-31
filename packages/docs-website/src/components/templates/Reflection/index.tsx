@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import { Flex } from 'ustudio-ui';
+import { useMediaQuery } from 'ustudio-ui/hooks';
 import { hasTypeParameter, isInterface } from '../../../api/validator';
 import { Reflection, Property as PropertyType, TypeAliasReflection, InterfaceReflection } from '../../../api/typings';
 import Layout from '../../Layout';
@@ -9,13 +10,14 @@ import ModuleContext from './module-context';
 
 import Styled from './style';
 
-const renderProperty = (property: TypeAliasReflection | PropertyType): ReactNode => {
+const renderProperty = (property: TypeAliasReflection | PropertyType, isReflectionInterface?: boolean): ReactNode => {
   return (
     <Property
       name={property.name}
       description={property.comment?.shortText}
       type={property.type}
       isOptional={(property as PropertyType).flags?.isOptional}
+      isInterfaceProp={isReflectionInterface}
     />
   );
 };
@@ -30,10 +32,12 @@ const mapProperties = (reflection: InterfaceReflection): ReactNode[] => {
 
       return 0;
     })
-    .map((property) => <li key={property.name}>{renderProperty(property)}</li>);
+    .map((property) => <li key={property.name}>{renderProperty(property, isInterface(reflection))}</li>);
 };
 
 const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext: reflection }) => {
+  const isMd = useMediaQuery('screen and (min-width: 768px)');
+
   return (
     <>
       <Helmet>
@@ -42,7 +46,7 @@ const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext
 
       <Layout>
         <Flex direction="column">
-          <h1>{reflection.name}</h1>
+          {isMd ? <h1>{reflection.name}</h1> : <h4>{reflection.name}</h4>}
 
           {reflection?.comment && <Styled.Description source={reflection.comment.shortText} />}
 
@@ -50,7 +54,12 @@ const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext
             {hasTypeParameter(reflection) && (
               <Styled.PropertyList>
                 {reflection.typeParameter?.map((tp) => (
-                  <Property name={`<${tp.name}>`} description="Type parameter" type={tp.type} key={tp.id} />
+                  <Property
+                    name={`<${tp.name}>`}
+                    description="Type parameter"
+                    type={tp.type}
+                    key={tp.id}
+                  />
                 ))}
               </Styled.PropertyList>
             )}
