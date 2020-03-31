@@ -15,7 +15,7 @@ interface PropertyProps {
 const Property: React.FC<PropertyProps> = ({ name, description, type, isOptional }) => {
   return (
     <Styled.Property direction="column">
-      <Flex alignment={{ horizontal: 'space-between' }}>
+      <Flex alignment={{ horizontal: 'space-between', vertical: 'start' }}>
         <Flex>
           <Styled.Name>{`${name}:`}</Styled.Name>
 
