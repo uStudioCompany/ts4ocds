@@ -10,13 +10,14 @@ import ModuleContext from './module-context';
 
 import Styled from './style';
 
-const renderProperty = (property: TypeAliasReflection | PropertyType): ReactNode => {
+const renderProperty = (property: TypeAliasReflection | PropertyType, isReflectionInterface?: boolean): ReactNode => {
   return (
     <Property
       name={property.name}
       description={property.comment?.shortText}
       type={property.type}
       isOptional={(property as PropertyType).flags?.isOptional}
+      isInterfaceProp={isReflectionInterface}
     />
   );
 };
@@ -31,7 +32,7 @@ const mapProperties = (reflection: InterfaceReflection): ReactNode[] => {
 
       return 0;
     })
-    .map((property) => <li key={property.name}>{renderProperty(property)}</li>);
+    .map((property) => <li key={property.name}>{renderProperty(property, isInterface(reflection))}</li>);
 };
 
 const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext: reflection }) => {
@@ -53,7 +54,12 @@ const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext
             {hasTypeParameter(reflection) && (
               <Styled.PropertyList>
                 {reflection.typeParameter?.map((tp) => (
-                  <Property name={`<${tp.name}>`} description="Type parameter" type={tp.type} key={tp.id} />
+                  <Property
+                    name={`<${tp.name}>`}
+                    description="Type parameter"
+                    type={tp.type}
+                    key={tp.id}
+                  />
                 ))}
               </Styled.PropertyList>
             )}

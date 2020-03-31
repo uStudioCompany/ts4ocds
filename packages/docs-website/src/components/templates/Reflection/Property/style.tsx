@@ -23,6 +23,8 @@ const Description = styled(ReactMarkdown).attrs(() => ({
   renderers: {
     paragraph: ({ children }): ReactElement => <Text variant="small">{children}</Text>,
     strong: ({ children }): ReactElement => <Text variant="small">{children}</Text>,
+    // eslint-disable-next-line jsx-a11y/anchor-has-content
+    link: (props) => <a {...props} target="_blank" rel="noreferrer noopener" />,
   },
 }))`
   color: var(--c-dark);

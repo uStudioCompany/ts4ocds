@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Badge } from 'ustudio-ui';
+import { Flex, Tag } from 'ustudio-ui';
 import { Type } from '../../../../api/typings';
 import Styled from './style';
 
@@ -10,9 +10,10 @@ interface PropertyProps {
   description?: string;
   type: Type;
   isOptional?: boolean;
+  isInterfaceProp?: boolean;
 }
 
-const Property: React.FC<PropertyProps> = ({ name, description, type, isOptional }) => {
+const Property: React.FC<PropertyProps> = ({ name, description, type, isOptional, isInterfaceProp }) => {
   return (
     <Styled.Property direction="column">
       <Flex alignment={{ horizontal: 'space-between', vertical: 'start' }}>
@@ -22,7 +23,9 @@ const Property: React.FC<PropertyProps> = ({ name, description, type, isOptional
           <Styled.Type>{renderType(type)}</Styled.Type>
         </Flex>
 
-        {isOptional && <Badge appearance={{ background: 'var(--c-light)', color: 'var(--c-dark)' }}>?</Badge>}
+        {!isOptional && isInterfaceProp && (
+          <Tag appearance={{ background: 'var(--c-negative-light)', color: 'var(--c-lightest)' }}>required</Tag>
+        )}
       </Flex>
 
       {description && <Styled.Description source={description} />}
