@@ -32,7 +32,6 @@ const mapVariables = (children?: VariableReflection[]): ReactNode => {
 };
 
 const Reflection: React.FC<IndexSignatureType | ObjectType> = (reflection) => {
-  console.log(reflection);
   return (
     <>
       {`{ `}
