@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Flex } from 'ustudio-ui';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../utils';
@@ -27,12 +27,14 @@ const CategoryName = styled.h2`
   margin-bottom: var(--i-large);
 `;
 
-const ReflectionsList = styled.ul.attrs(() => ({
-  xs: {
-    template: 'repeat(auto-fit, 300px)',
-    alignment: { horizontal: 'center' },
-  },
-}))``;
+const ReflectionsList = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+
+  ${Mixin.Screen.md(css`
+    grid-template-columns: repeat(3, 1fr);
+  `)}
+`;
 
 const Reflection = styled(Link)`
   position: relative;
