@@ -17,11 +17,11 @@ const Property: React.FC<PropertyProps> = ({ name, description, type, isOptional
   return (
     <Styled.Property direction="column">
       <Flex alignment={{ horizontal: 'space-between', vertical: 'start' }}>
-        <Flex>
+        <Styled.Meta>
           <Styled.Name>{`${name}:`}</Styled.Name>
 
           <Styled.Type>{renderType(type)}</Styled.Type>
-        </Flex>
+        </Styled.Meta>
 
         {!isOptional && isInterfaceProp && (
           <Tag appearance={{ background: 'var(--c-negative-light)', color: 'var(--c-lightest)' }}>required</Tag>
