@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { Flex } from 'ustudio-ui';
 import { useMediaQuery } from 'ustudio-ui/hooks';
 import { ThemeProvider } from 'ustudio-ui/theme';
