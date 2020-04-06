@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/ts4ocds',
   siteMetadata: {
     title: `TS4OCDS`,
     author: `uStudio Front-End Department`,
@@ -8,8 +9,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
       },
     },
     `gatsby-transformer-sharp`,
@@ -17,11 +26,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `TS4OCDS Documentation`,
         start_url: `/`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/assets/images/ts4ocds-favicon.png`,
       },
     },
     'gatsby-plugin-styled-components',

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["esnext"],
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "keyofStringsOnly": true,
@@ -7,7 +8,9 @@
     "strictNullChecks": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "skipLibCheck": false
   },
   "exclude": [
     "node_modules"

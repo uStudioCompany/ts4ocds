@@ -51,3 +51,13 @@ Also, take into consideration that `extensions` can populate some
 entities from the `standard` with new properties. Here we extend
 such interfaces from their `standard` counterparts and add new properties
 so, for example, you can find `Item` in both `standard` and some of the `extensions`.
+
+## Contributing
+
+We are open to receive any contributings to our project. If you are willing to contribute,
+please make sure to read our [contributing](https://github.com/uStudioCompany/ts4ocds/blob/master/CONTRIBUTING.md)
+guide.
+
+If you have noticed bugs or want to propose a new feature/improvement, you should check out
+our [issues](https://github.com/uStudioCompany/ts4ocds/issues) section. Every properly
+written issue will be attended and reviewed by our team.

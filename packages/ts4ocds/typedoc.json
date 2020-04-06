@@ -1,44 +1,8 @@
 {
   "name": "TS4OCDS",
   "inputFiles": ["./standard", "./extensions"],
-  "out": "docs",
   "exclude": ["**/node_modules/**/*", "**/index.d.ts"],
   "includeDeclarations": true,
   "disableSources": true,
-  "readme": "../../README.md",
-  "theme": "../../node_modules/typedoc-neo-theme/bin/default",
-  "outline": [
-    {
-      "Standard": {
-        "Award": "award",
-        "Contract": "contract",
-        "Document": "document",
-        "Item": "item",
-        "Organization": "organization",
-        "Period": "period",
-        "Planning": "planning",
-        "Related process": "relatedprocess",
-        "Release": "release",
-        "Tender": "tender",
-        "Value": "value"
-      },
-      "Extensions": {
-        "Conversions": "conversions",
-        "Lots": "lots",
-        "Metrics": "metrics",
-        "Options": "options",
-        "Requirements": "requirements"
-      }
-    }
-  ],
-  "links": [
-    {
-      "label": "GitHub",
-      "url": "https://github.com/uStudioCompany/ts4ocds/"
-    },
-    {
-      "label": "OCDS",
-      "url": "https://standard.open-contracting.org/latest/en/"
-    }
-  ]
+  "json": "../docs-website/src/api/api.json"
 }
