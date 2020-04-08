@@ -1,12 +1,16 @@
 import styled, { css } from 'styled-components';
 import { Flex } from 'ustudio-ui';
+import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../utils';
 
-const LargeContainer = styled.div<{ isLoaded: boolean }>(
+const Wrapper = styled.div<{ isLoaded: boolean }>(
   ({ isLoaded }) => css`
-    display: grid;
-    grid-auto-rows: min-content;
-    grid-gap: var(--i-large);
+    padding: var(--i-large) var(--i-large) 49px;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--c-lightest);
 
     opacity: ${isLoaded ? 0 : 1};
 
@@ -18,17 +22,24 @@ const LargeContainer = styled.div<{ isLoaded: boolean }>(
 
     z-index: calc(var(--l-topmost) * 2);
 
-    width: 100%;
-    height: 100%;
-
-    padding: calc(var(--i-large) + 49px) var(--i-large) var(--i-large);
-    margin: 0 auto;
     pointer-events: ${isLoaded ? 'none' : 'auto'};
 
-    background-color: var(--c-lightest);
+    ${Mixin.Screen.md(css`
+      padding: calc(49px + var(--i-large)) var(--i-large) var(--i-large);
+    `)}
   `
 );
 
+const LargeContainer = styled.div`
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-gap: var(--i-large);
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0 var(--i-large);
+`;
 const MediumContainer = styled.div`
   display: grid;
   grid-auto-rows: min-content;
@@ -43,4 +54,4 @@ const InlineContainer = styled(Flex)`
   }
 `;
 
-export default withDisplayNames({ LargeContainer, MediumContainer, InlineContainer });
+export default withDisplayNames({ LargeContainer, MediumContainer, InlineContainer, Wrapper });
