@@ -10,7 +10,10 @@ import type { RequirementGroup } from './requirement-group';
  */
 export type Criterion = TendererCriterion | ItemCriterion;
 
-interface BaseCriterion {
+/**
+ * A criterion on which either bidders or items will be judged, evaluated or assessed.
+ */
+export interface BaseCriterion {
   /**
    * The identifier for this criterion.
    * It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid).
@@ -44,11 +47,25 @@ interface BaseCriterion {
   requirementGroups: RequirementGroup[];
 }
 
-interface TendererCriterion extends BaseCriterion {
+/**
+ * A criterion on which either bidders or items will be judged, evaluated or assessed.
+ */
+export interface TendererCriterion extends BaseCriterion {
+  /**
+   * The schema element that the criterion judges, evaluates or assesses.
+   * For example criterion may be defined against items or against bidders.
+   */
   relatesTo: 'tenderer';
 }
 
-interface ItemCriterion extends BaseCriterion {
+/**
+ * A criterion on which either bidders or items will be judged, evaluated or assessed.
+ */
+export interface ItemCriterion extends BaseCriterion {
+  /**
+   * The schema element that the criterion judges, evaluates or assesses.
+   * For example criterion may be defined against items or against bidders.
+   */
   relatesTo: 'item';
   /**
    * Where relatesTo = \"item\" this field must be populated with the id of the item in this tender section

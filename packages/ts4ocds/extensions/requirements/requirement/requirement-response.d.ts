@@ -19,7 +19,11 @@ export type RequirementResponse<DT extends DataType = undefined> = DT extends 's
   ? BaseRequirementResponse
   : NumberRequirementResponse;
 
-interface BaseRequirementResponse {
+/**
+ * An assertion that responds to a single requirement.
+ * A requirement response provides the value for the requirement and may provide the period to which it applies.
+ */
+export interface BaseRequirementResponse {
   /**
    * The identifier for this requirement response.
    * It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid).
@@ -54,14 +58,35 @@ interface BaseRequirementResponse {
   relatedTenderer?: OrganizationReference;
 }
 
-interface StringRequirementResponse extends BaseRequirementResponse {
+/**
+ * An assertion that responds to a single requirement.
+ * A requirement response provides the value for the requirement and may provide the period to which it applies.
+ */
+export interface StringRequirementResponse extends BaseRequirementResponse {
+  /**
+   * The value of this requirement response. The value must be of the type defined in the requirement.dataType field.
+   */
   value?: string;
 }
 
-interface NumberRequirementResponse extends BaseRequirementResponse {
+/**
+ * An assertion that responds to a single requirement.
+ * A requirement response provides the value for the requirement and may provide the period to which it applies.
+ */
+export interface NumberRequirementResponse extends BaseRequirementResponse {
+  /**
+   * The value of this requirement response. The value must be of the type defined in the requirement.dataType field.
+   */
   value?: number;
 }
 
-interface BooleanRequirementResponse extends BaseRequirementResponse {
+/**
+ * An assertion that responds to a single requirement.
+ * A requirement response provides the value for the requirement and may provide the period to which it applies.
+ */
+export interface BooleanRequirementResponse extends BaseRequirementResponse {
+  /**
+   * The value of this requirement response. The value must be of the type defined in the requirement.dataType field.
+   */
   value?: boolean;
 }
