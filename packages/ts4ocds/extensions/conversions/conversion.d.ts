@@ -30,7 +30,7 @@ interface BaseConversion {
   coefficients: Coefficient[];
 }
 
-interface RelatedConversion extends BaseConversion {
+export interface RelatedConversion extends BaseConversion {
   /**
    * The schema element that the conversion applies.
    * For example, the conversion may be defined against a requirement or against a metric.
@@ -43,7 +43,15 @@ interface RelatedConversion extends BaseConversion {
   relatedItem: string;
 }
 
-interface UnrelatedConversion extends BaseConversion {
+export interface UnrelatedConversion extends BaseConversion {
+  /**
+   * The schema element that the conversion applies.
+   * For example, the conversion may be defined against a requirement or against a metric.
+   */
   relatesTo?: never;
+  /**
+   * Where 'relatesTo' is not empty this field must be populated with the id of the item in this tender section
+   * which the conversion relates to.
+   */
   relatedItem?: never;
 }

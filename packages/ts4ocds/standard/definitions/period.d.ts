@@ -49,7 +49,15 @@ interface PeriodBase {
  * In some cases, not all of these fields will have known or relevant values.
  */
 export interface PeriodInDays extends PeriodBase {
+  /**
+   * The start date for the period.
+   * When known, a precise start date must be provided.
+   */
   startDate?: never;
+  /**
+   * The end date for the period.
+   * When known, a precise start date must be provided.
+   */
   endDate?: never;
   /**
    * The period cannot be extended beyond this date.
