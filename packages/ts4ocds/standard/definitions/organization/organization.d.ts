@@ -59,6 +59,10 @@ export interface Organization<PartyDetails extends {} | null = null> {
   details?: PartyDetails;
 }
 
+/**
+ * The party's role(s) in the contracting process,
+ * using the open [partyRole](https://standard.open-contracting.org/1.1/en/schema/codelists/#party-role) codelist.
+ */
 export type Role =
   | 'buyer'
   | 'procuringEntity'

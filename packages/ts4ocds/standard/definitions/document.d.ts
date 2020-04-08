@@ -59,6 +59,10 @@ export interface Document {
   language?: string;
 }
 
+/**
+ * A classification of the document described,
+ * using the open [documentType](https://standard.open-contracting.org/1.1/en/schema/codelists/#document-type) codelist.
+ */
 export type DocumentType =
   | 'plannedProcurementNotice'
   | 'tenderNotice'
