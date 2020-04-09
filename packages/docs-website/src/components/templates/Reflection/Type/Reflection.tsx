@@ -3,7 +3,12 @@ import { IndexSignatureType, ObjectType, VariableReflection } from '../../../../
 import renderType from './render-type';
 
 const renderIndexSignature = (reflection: IndexSignatureType) => {
-  const indexSignature = reflection.declaration.indexSignature[0];
+  const indexSignature = reflection.declaration.indexSignature?.[0];
+
+  if (!indexSignature) {
+    return '';
+  }
+
   const parameter = indexSignature.parameters[0];
 
   return (
