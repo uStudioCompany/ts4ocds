@@ -72,4 +72,8 @@ export interface Award {
   amendments: Amendment[];
 }
 
+/**
+ * The current status of the award,
+ * from the closed [awardStatus](https://standard.open-contracting.org/1.1/en/schema/codelists/#award-status) codelist.
+ */
 export type AwardStatus = 'pending' | 'active' | 'cancelled' | 'unsuccessful';

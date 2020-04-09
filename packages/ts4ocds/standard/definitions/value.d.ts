@@ -18,6 +18,10 @@ export interface Value {
   currency?: Currency;
 }
 
+/**
+ * The currency of the amount,
+ * from the closed [currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency) codelist.
+ */
 export type Currency =
   | 'ADP'
   | 'AED'

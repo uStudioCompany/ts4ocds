@@ -10,7 +10,7 @@ import type { Address, Period, Unit } from 'standard';
 /**
  * Available prescribed option for requirement/observation that can be set as a value for bid.requirementResponse/award.
  */
-type Option<RelatesTo extends OptionGroupRelatesTo = string> = BaseOption &
+export type Option<RelatesTo extends OptionGroupRelatesTo = string> = BaseOption &
   (RelatesTo extends 'unit'
     ? { unit?: Unit }
     : RelatesTo extends 'contractPeriod'
@@ -29,7 +29,10 @@ type Option<RelatesTo extends OptionGroupRelatesTo = string> = BaseOption &
     ? { placeOfPerformance?: Address }
     : {});
 
-interface BaseOption {
+/**
+ * Available prescribed option for requirement/observation that can be set as a value for bid.requirementResponse/award.
+ */
+export interface BaseOption {
   /**
    * An identifier for this option.
    */

@@ -50,6 +50,10 @@ export interface Milestone {
   status?: MilestoneStatus;
 }
 
+/**
+ * The nature of the milestone,
+ * using the open [milestoneType](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-type) codelist.
+ */
 export type MilestoneType =
   | 'preProcurement'
   | 'approval'
@@ -60,4 +64,8 @@ export type MilestoneType =
   | 'financing'
   | string;
 
+/**
+ * The status that was realized on the date provided in `dateModified`,
+ * from the closed [milestoneStatus](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status) codelist.
+ */
 export type MilestoneStatus = 'scheduled' | 'met' | 'notMet' | 'partiallyMet';

@@ -1,14 +1,13 @@
 {
   "name": "ts4ocds",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.5",
   "types": "index.d.ts",
   "files": [
     "standard",
     "extensions",
     "index.d.ts",
     "LICENSE",
-    "README.md",
-    "tsconfig.json"
+    "README.md"
   ],
   "license": "MIT",
   "author": "uStudio Front-End Department",

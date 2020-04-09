@@ -4,7 +4,6 @@
  */
 
 import type { Value } from 'standard';
-import type { Lot } from './lot';
 
 /**
  * Where the buyer reserves the right to combine lots, or wishes to specify the total value for a group of lots,
@@ -19,7 +18,7 @@ export interface LotGroup {
    * A list of the identifiers of the lots that form this group.
    * Lots may appear in more than one group.
    */
-  relatedLots?: Lot['id'][];
+  relatedLots?: string[];
   /**
    * The buyer reserves the right to combine the lots in this group when awarding a contract.
    */

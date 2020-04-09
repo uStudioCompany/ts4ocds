@@ -27,6 +27,9 @@ export interface OptionGroup {
   relatesTo: OptionGroupRelatesTo;
 }
 
+/**
+ * The scheme element that the group applies
+ */
 export type OptionGroupRelatesTo =
   | 'placeOfPerformance'
   | 'contractPeriod'

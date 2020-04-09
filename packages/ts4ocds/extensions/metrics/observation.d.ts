@@ -12,7 +12,7 @@ import type { MilestoneReference } from './milestone-reference';
  */
 export type Observation = FinancialObservation | NonFinancialObservation;
 
-interface BaseObservation {
+export interface BaseObservation {
   /**
    * A local identifier for this specific observation.
    * This may be an arbitrary identifier, or could be a composite of the metric identifier, and the date
@@ -44,14 +44,14 @@ interface BaseObservation {
   relatedImplementationMilestone?: MilestoneReference;
 }
 
-interface FinancialObservation extends BaseObservation {
+export interface FinancialObservation extends BaseObservation {
   /**
    * For financial metrics, the value of this forecast, target or actual observation.
    */
   value: Value;
 }
 
-interface NonFinancialObservation extends BaseObservation {
+export interface NonFinancialObservation extends BaseObservation {
   /**
    * For non-financial metrics, the measure of this forecast, target or actual observation.
    * Measures may be provided as free text or numerical values.

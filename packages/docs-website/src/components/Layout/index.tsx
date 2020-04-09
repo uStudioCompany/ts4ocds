@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Flex } from 'ustudio-ui';
+import { Cell, Flex } from 'ustudio-ui';
 import { useMediaQuery } from 'ustudio-ui/hooks';
 import { ThemeProvider } from 'ustudio-ui/theme';
 
@@ -50,10 +50,18 @@ const Layout: React.FC = ({ children }) => {
           <Styled.Layout>
             <Header siteTitle="TS4OCDS" />
 
-            <Styled.Main direction="column">
-              <Breadcrumbs />
+            <Styled.Main isContainer>
+              <Cell
+                md={{ size: 10, offset: { before: 1, after: 1 } }}
+                lg={{ size: 10, offset: { before: 2, after: 2 } }}
+                xl={{ size: 10, offset: { before: 3, after: 3 } }}
+              >
+                <Flex direction="column">
+                  <Breadcrumbs />
 
-              {children}
+                  {children}
+                </Flex>
+              </Cell>
             </Styled.Main>
 
             <Styled.Footer>

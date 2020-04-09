@@ -3,8 +3,6 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "standard/*": ["./standard/*"],
-      "standard": ["./standard"],
       "metrics/*": ["./extensions/metrics/*"],
       "metrics": ["./extensions/metrics"],
       "requirements/*": ["./extensions/requirements/*"],
