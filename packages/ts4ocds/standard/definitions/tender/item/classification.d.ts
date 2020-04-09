@@ -30,4 +30,9 @@ export interface Classification {
   uri?: string;
 }
 
+/**
+ * The scheme or codelist from which the classification code is taken.
+ * For line item classifications,
+ * this uses the open [itemClassificationScheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme) codelist.
+ */
 export type ItemClassificationScheme = 'CPV' | 'CPVS' | 'GSIN' | 'UNSPSC' | 'CPC' | 'OKDP' | 'OKPD' | 'CUCOP' | string;

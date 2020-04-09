@@ -33,4 +33,8 @@ export interface Lot {
   value: Value;
 }
 
+/**
+ * The current status of the process related to this lot
+ * based on the [tenderStatus codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#tender-status)
+ */
 export type LotStatus = TenderStatus;

@@ -2,31 +2,12 @@ import React, { ReactNode } from 'react';
 import { v4 } from 'uuid';
 import { IntersectionType, UnionType } from '../../../../api/typings';
 import { isIntrinsic } from '../../../../api/validator';
-import Reference from './Reference';
-import Reflection from './Reflection';
+import renderType from './render-type';
 
 const mapUnion = (union: UnionType | IntersectionType): ReactNode[] => {
   return union.types
     .filter((type) => !(isIntrinsic(type) && type.name === 'undefined'))
-    .map((type) => {
-      switch (type.type) {
-        case 'intrinsic': {
-          return type.name;
-        }
-        case 'stringLiteral': {
-          return `'${type.value}'`;
-        }
-        case 'reference': {
-          return <Reference {...type} />;
-        }
-        case 'reflection': {
-          return <Reflection {...type} />;
-        }
-        default: {
-          return '';
-        }
-      }
-    });
+    .map(renderType);
 };
 
 const renderNode = (separator: '|' | '&') => (node: ReactNode, index: number, array: ReactNode[]) => {

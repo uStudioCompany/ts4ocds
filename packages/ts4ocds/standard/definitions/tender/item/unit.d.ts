@@ -31,4 +31,9 @@ export interface Unit {
   uri?: string;
 }
 
+/**
+ * The list from which identifiers for units of measure are taken,
+ * using the open [unitClassificationScheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme) codelist.
+ * 'UNCEFACT' is recommended.
+ */
 export type UnitClassificationScheme = 'UNCEFACT' | 'QUDT' | string;

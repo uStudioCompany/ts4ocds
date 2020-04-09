@@ -14,7 +14,13 @@ import type { DataType } from './data-type';
  */
 export type Requirement = StringRequirement | BooleanRequirement | NumberRequirement;
 
-interface BaseRequirement {
+/**
+ * An atomic requirement.
+ * Requirements can specify the expected value that the response has to contain,
+ * or a range of threshold values within which the response has to fit in.
+ * The requirement may apply to a certain period of time.
+ */
+export interface BaseRequirement {
   /**
    * The identifier for this requirement.
    * It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid).
@@ -47,18 +53,54 @@ interface BaseRequirement {
   period?: Period;
 }
 
-interface StringRequirement extends BaseRequirement {
+/**
+ * An atomic requirement.
+ * Requirements can specify the expected value that the response has to contain,
+ * or a range of threshold values within which the response has to fit in.
+ * The requirement may apply to a certain period of time.
+ */
+export interface StringRequirement extends BaseRequirement {
+  /**
+   * The data type in which the requirement response must be provided.
+   */
   dataType?: 'string';
+  /**
+   * Used to state the requirement when the response must be particular value.
+   */
   expectedValue?: string;
 }
 
-interface BooleanRequirement extends BaseRequirement {
+/**
+ * An atomic requirement.
+ * Requirements can specify the expected value that the response has to contain,
+ * or a range of threshold values within which the response has to fit in.
+ * The requirement may apply to a certain period of time.
+ */
+export interface BooleanRequirement extends BaseRequirement {
+  /**
+   * The data type in which the requirement response must be provided.
+   */
   dataType?: 'boolean';
+  /**
+   * Used to state the requirement when the response must be particular value.
+   */
   expectedValue?: boolean;
 }
 
-interface NumberRequirement extends BaseRequirement {
+/**
+ * An atomic requirement.
+ * Requirements can specify the expected value that the response has to contain,
+ * or a range of threshold values within which the response has to fit in.
+ * The requirement may apply to a certain period of time.
+ */
+export interface NumberRequirement extends BaseRequirement {
+  /**
+   * The data type in which the requirement response must be provided.
+   */
   dataType?: 'number' | 'integer';
+  /**
+   * Used to state the requirement when the response must be particular value.
+   */
   expectedValue?: number;
   /**
    * Used to state the lower bound of the requirement when the response must be within a certain range.

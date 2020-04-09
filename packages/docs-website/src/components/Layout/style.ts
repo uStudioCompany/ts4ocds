@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Flex } from 'ustudio-ui';
+import { Grid } from 'ustudio-ui';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../utils';
 
@@ -12,15 +12,12 @@ const Layout = styled.main`
   min-height: 100vh;
 `;
 
-const Main = styled(Flex)`
+const Main = styled(Grid)`
   flex: 1;
-
-  padding: var(--i-large) var(--i-large) 49px;
+  padding: var(--i-large) 0 49px;
 
   ${Mixin.Screen.md(css`
-    padding: calc(49px + var(--i-large)) var(--i-large) var(--i-large);
-
-    max-width: 1024px;
+    padding: calc(49px + var(--i-large)) 0 var(--i-large);
   `)}
 `;
 
