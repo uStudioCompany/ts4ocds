@@ -25,7 +25,7 @@ const Wrapper = styled.div<{ isLoaded: boolean }>(
     pointer-events: ${isLoaded ? 'none' : 'auto'};
 
     ${Mixin.Screen.md(css`
-      padding: calc(49px + var(--i-large)) var(--i-large) var(--i-large);
+      padding: calc(49px + var(--i-large)) 0 var(--i-large);
     `)}
   `
 );
@@ -37,8 +37,6 @@ const LargeContainer = styled.div`
 
   width: 100%;
   height: 100%;
-
-  padding: 0 var(--i-large);
 `;
 const MediumContainer = styled.div`
   display: grid;

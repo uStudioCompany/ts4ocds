@@ -17,8 +17,12 @@ const LoadingScreen: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
 
   return isRendering ? (
     <Styled.Wrapper isLoaded={isLoaded}>
-      <Grid isContainer lg={{ maxWidth: 1024 }} xl={{ maxWidth: 1024 }}>
-        <Cell>
+      <Grid isContainer>
+        <Cell
+          md={{ size: 10, offset: { before: 1, after: 1 } }}
+          lg={{ size: 10, offset: { before: 2, after: 2 } }}
+          xl={{ size: 10, offset: { before: 3, after: 3 } }}
+        >
           <Styled.LargeContainer>
             <Styled.InlineContainer>
               <Placeholder variant="text" appearance={{ height: 'small', width: '66%' }} />
