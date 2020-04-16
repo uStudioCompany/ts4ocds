@@ -4,6 +4,6 @@
  */
 
 import type { WithOptions } from 'extensions/conversions/extension/with-options';
-import type { Observation } from 'metrics';
+import type { BaseObservation } from 'metrics';
 
-export interface ObservationWithOptions extends Observation, WithOptions {}
+export interface ObservationWithOptions extends BaseObservation, WithOptions {}

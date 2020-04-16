@@ -4,6 +4,6 @@
  */
 
 import type { WithOptions } from 'extensions/conversions/extension/with-options';
-import type { Requirement } from 'requirements';
+import type { BaseRequirement } from 'requirements';
 
-export interface RequirementWithOptions extends Requirement, WithOptions {}
+export interface RequirementWithOptions extends BaseRequirement, WithOptions {}
