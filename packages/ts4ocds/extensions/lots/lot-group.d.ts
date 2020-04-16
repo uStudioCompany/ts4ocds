@@ -3,7 +3,7 @@
  *  @module Lots
  */
 
-import type { Value } from 'standard';
+import type { Value } from '../../standard';
 
 /**
  * Where the buyer reserves the right to combine lots, or wishes to specify the total value for a group of lots,

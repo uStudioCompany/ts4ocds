@@ -3,7 +3,7 @@
  * @module Metrics
  */
 
-import type { Implementation } from 'standard';
+import type { Implementation } from '../../../standard';
 import type { Metric } from '../metric';
 
 export interface ImplementationWithMetrics extends Implementation {

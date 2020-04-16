@@ -3,7 +3,7 @@
  *  @module Lots
  */
 
-import type { Item } from 'standard';
+import type { Item } from '../../../standard';
 
 /**
  * If this item belongs to a lot, provide the identifier of the related lot here.

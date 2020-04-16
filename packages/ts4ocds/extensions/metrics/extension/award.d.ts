@@ -3,7 +3,7 @@
  * @module Metrics
  */
 
-import type { Award } from 'standard';
+import type { Award } from '../../../standard';
 import type { Metric } from '../metric';
 
 export interface AwardWithAgreedMetrics extends Award {

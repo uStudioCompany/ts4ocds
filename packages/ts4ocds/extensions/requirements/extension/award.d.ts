@@ -3,7 +3,7 @@
  * @module Requirements
  */
 
-import type { Award } from 'standard';
+import type { Award } from '../../../standard';
 import type { RequirementResponse } from '../requirement';
 
 export interface AwardWithRequirementResponses extends Award {

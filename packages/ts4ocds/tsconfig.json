@@ -1,19 +1,6 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "metrics/*": ["./extensions/metrics/*"],
-      "metrics": ["./extensions/metrics"],
-      "requirements/*": ["./extensions/requirements/*"],
-      "requirements": ["./extensions/requirements"],
-      "options/*": ["./extensions/options/*"],
-      "options": ["./extensions/options"],
-      "lots/*": ["./extensions/lots/*"],
-      "lots": ["./extensions/lots"],
-      "conversions/*": ["./extensions/conversions/*"],
-      "conversions": ["./extensions/conversion*"]
-    },
     "forceConsistentCasingInFileNames": true,
     "keyofStringsOnly": true,
     "noImplicitAny": true,

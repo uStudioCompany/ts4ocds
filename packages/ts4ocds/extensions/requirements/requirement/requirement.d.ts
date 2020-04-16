@@ -3,7 +3,7 @@
  * @module Requirements
  */
 
-import type { Period } from 'standard';
+import type { Period } from '../../../standard';
 import type { DataType } from './data-type';
 
 /**

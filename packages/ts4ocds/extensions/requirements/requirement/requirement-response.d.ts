@@ -3,7 +3,7 @@
  * @module Requirements
  */
 
-import type { OrganizationReference, Period } from 'standard';
+import type { OrganizationReference, Period } from '../../../standard';
 import type { DataType } from './data-type';
 import type { RequirementReference } from './requirement-reference';
 

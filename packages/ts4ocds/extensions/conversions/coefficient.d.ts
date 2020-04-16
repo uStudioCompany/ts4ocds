@@ -3,7 +3,7 @@
  * @module Conversions
  */
 
-import type { Period } from 'standard';
+import type { Period } from '../../standard';
 
 /**
  * A coefficient applied in case of the value of prescribed attribute matches

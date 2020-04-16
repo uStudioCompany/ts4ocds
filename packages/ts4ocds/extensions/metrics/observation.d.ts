@@ -3,7 +3,7 @@
  * @module Metrics
  */
 
-import type { Period, Value, Unit } from 'standard';
+import type { Period, Value, Unit } from '../../standard';
 import type { MilestoneReference } from './milestone-reference';
 
 /**
