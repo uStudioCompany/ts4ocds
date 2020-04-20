@@ -5,6 +5,9 @@
 
 import type { Value } from '../../value';
 
+/**
+ * A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price.
+ */
 export interface Unit {
   /**
    * The list from which identifiers for units of measure are taken,

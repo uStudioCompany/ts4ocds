@@ -10,7 +10,7 @@ import type { Identifier } from './identifier';
 /**
  * A party (organization)
  */
-export interface Organization<PartyDetails extends {} | null = null> {
+export interface Organization<PartyDetails extends object | null = null> {
   /**
    * A common name for this organization or other participant in the contracting process.
    * The identifier object provides a space for the formal legal name, and so this may either repeat that value,
