@@ -38,7 +38,7 @@ export interface Observation {
   /**
    * For financial metrics, the value of this forecast, target or actual observation.
    */
-  value: Value;
+  value?: Value;
   /**
    * For non-financial metrics, the measure of this forecast, target or actual observation.
    * Measures may be provided as free text or numerical values.
@@ -49,4 +49,36 @@ export interface Observation {
    * target or actual observation relates.
    */
   relatedImplementationMilestone?: MilestoneReference;
+}
+
+/**
+ * An actual or target observation.
+ * Observations should include either a value (for financial metrics) or measure (for other metrics).
+ */
+export interface FinancialObservation extends Observation {
+  /**
+   * For financial metrics, the value of this forecast, target or actual observation.
+   */
+  value: Value;
+  /**
+   * For non-financial metrics, the measure of this forecast, target or actual observation.
+   * Measures may be provided as free text or numerical values.
+   */
+  measure?: never;
+}
+
+/**
+ * An actual or target observation.
+ * Observations should include either a value (for financial metrics) or measure (for other metrics).
+ */
+export interface NonFinancialObservation extends Observation {
+  /**
+   * For financial metrics, the value of this forecast, target or actual observation.
+   */
+  value?: never;
+  /**
+   * For non-financial metrics, the measure of this forecast, target or actual observation.
+   * Measures may be provided as free text or numerical values.
+   */
+  measure: string | number;
 }

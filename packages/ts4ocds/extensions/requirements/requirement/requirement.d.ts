@@ -52,3 +52,62 @@ export interface Requirement {
    */
   period?: Period;
 }
+
+/**
+ * An atomic requirement.
+ * Requirements can specify the expected value that the response has to contain,
+ * or a range of threshold values within which the response has to fit in.
+ * The requirement may apply to a certain period of time.
+ */
+export interface StringRequirement extends Requirement {
+  /**
+   * The data type in which the requirement response must be provided.
+   */
+  dataType?: 'string';
+  /**
+   * Used to state the requirement when the response must be particular value.
+   */
+  expectedValue?: string;
+}
+
+/**
+ * An atomic requirement.
+ * Requirements can specify the expected value that the response has to contain,
+ * or a range of threshold values within which the response has to fit in.
+ * The requirement may apply to a certain period of time.
+ */
+export interface BooleanRequirement extends Requirement {
+  /**
+   * The data type in which the requirement response must be provided.
+   */
+  dataType?: 'boolean';
+  /**
+   * Used to state the requirement when the response must be particular value.
+   */
+  expectedValue?: boolean;
+}
+
+/**
+ * An atomic requirement.
+ * Requirements can specify the expected value that the response has to contain,
+ * or a range of threshold values within which the response has to fit in.
+ * The requirement may apply to a certain period of time.
+ */
+export interface NumberRequirement extends Requirement {
+  /**
+   * The data type in which the requirement response must be provided.
+   */
+  dataType?: 'number' | 'integer';
+  /**
+   * Used to state the requirement when the response must be particular value.
+   */
+  expectedValue?: number;
+  /**
+   * Used to state the lower bound of the requirement when the response must be within a certain range.
+   */
+  minValue?: number;
+  /**
+   * Used to state the upper bound of the requirement when the response must be within a certain range.
+   */
+  maxValue?: number;
+}

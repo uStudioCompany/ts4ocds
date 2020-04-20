@@ -5,6 +5,7 @@
   "files": [
     "standard",
     "extensions",
+    "validators",
     "index.d.ts",
     "LICENSE",
     "README.md"

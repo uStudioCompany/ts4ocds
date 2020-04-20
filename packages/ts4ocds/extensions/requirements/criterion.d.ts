@@ -38,11 +38,38 @@ export interface Criterion {
    * Where relatesTo = \"item\" this field must be populated with the id of the item in this tender section
    * which the criterion relates to. Where relatesTo <> \"item\" this field should be omitted.
    */
-  relatedItem: string;
+  relatedItem?: string;
   /**
    * A list of requirement groups for this Criterion.
    * A criterion is satisfied by one or more requirement groups being met.
    * A requirement group is met when all requirements in the group are satisfied.
    */
   requirementGroups: RequirementGroup[];
+}
+
+/**
+ * A criterion on which either bidders or items will be judged, evaluated or assessed.
+ */
+export interface TendererCriterion extends Criterion {
+  /**
+   * The schema element that the criterion judges, evaluates or assesses.
+   * For example criterion may be defined against items or against bidders.
+   */
+  relatesTo: 'tenderer';
+}
+
+/**
+ * A criterion on which either bidders or items will be judged, evaluated or assessed.
+ */
+export interface ItemCriterion extends Criterion {
+  /**
+   * The schema element that the criterion judges, evaluates or assesses.
+   * For example criterion may be defined against items or against bidders.
+   */
+  relatesTo: 'item';
+  /**
+   * Where relatesTo = \"item\" this field must be populated with the id of the item in this tender section
+   * which the criterion relates to. Where relatesTo <> \"item\" this field should be omitted.
+   */
+  relatedItem: string;
 }

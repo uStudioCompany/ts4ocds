@@ -9,6 +9,11 @@ import type { OptionToCombine } from './option-to-combine';
 /**
  * Where options are applied 'Option Details' is used to capture this information
  */
+export type OptionDetails = OptionDetailsWithCombine | OptionDetailsWithGroups;
+
+/**
+ * Where options are applied 'Option Details' is used to capture this information
+ */
 export interface OptionDetailsWithGroups {
   /**
    * A list of option groups for this element
