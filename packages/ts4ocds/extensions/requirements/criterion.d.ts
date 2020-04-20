@@ -8,7 +8,7 @@ import type { RequirementGroup } from './requirement-group';
 /**
  * A criterion on which either bidders or items will be judged, evaluated or assessed.
  */
-export interface Criterion {
+export interface Criterion<RG extends RequirementGroup = RequirementGroup> {
   /**
    * The identifier for this criterion.
    * It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid).
@@ -44,7 +44,7 @@ export interface Criterion {
    * A criterion is satisfied by one or more requirement groups being met.
    * A requirement group is met when all requirements in the group are satisfied.
    */
-  requirementGroups: RequirementGroup[];
+  requirementGroups: RG[];
 }
 
 /**
