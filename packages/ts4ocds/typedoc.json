@@ -1,7 +1,7 @@
 {
   "name": "TS4OCDS",
   "inputFiles": ["./standard", "./extensions"],
-  "exclude": ["**/node_modules/**/*", "**/index.d.ts"],
+  "exclude": ["**/node_modules/**/*", "**/index.d.ts", "validators/**/*"],
   "includeDeclarations": true,
   "disableSources": true,
   "json": "../docs-website/src/api/api.json"
