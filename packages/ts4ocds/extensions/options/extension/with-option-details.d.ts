@@ -3,8 +3,8 @@
  * @module Options
  */
 
-import type { OptionDetails } from '../option-details';
+import type { OptionDetailsWithCombine, OptionDetailsWithGroups } from '../option-details';
 
 export interface WithOptionDetails {
-  optionDetails: OptionDetails;
+  optionDetails: OptionDetailsWithCombine | OptionDetailsWithGroups;
 }
