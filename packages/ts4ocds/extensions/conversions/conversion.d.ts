@@ -9,9 +9,7 @@ import type { Coefficient } from './coefficient';
  * Conversion is used to describe conversions and its coefficients applicable
  * for specific value received for requirement or observation
  */
-export type Conversion = RelatedConversion | UnrelatedConversion;
-
-interface BaseConversion {
+export interface Conversion {
   /**
    * An identifier for this conversion.
    */
@@ -28,30 +26,14 @@ interface BaseConversion {
    * A list of applicable coefficients for this conversion
    */
   coefficients: Coefficient[];
-}
-
-export interface RelatedConversion extends BaseConversion {
   /**
    * The schema element that the conversion applies.
    * For example, the conversion may be defined against a requirement or against a metric.
    */
-  relatesTo: 'requirement' | 'observation';
+  relatesTo?: 'requirement' | 'observation';
   /**
    * Where 'relatesTo' is not empty this field must be populated with the id of the item in this tender section
    * which the conversion relates to.
    */
-  relatedItem: string;
-}
-
-export interface UnrelatedConversion extends BaseConversion {
-  /**
-   * The schema element that the conversion applies.
-   * For example, the conversion may be defined against a requirement or against a metric.
-   */
-  relatesTo?: never;
-  /**
-   * Where 'relatesTo' is not empty this field must be populated with the id of the item in this tender section
-   * which the conversion relates to.
-   */
-  relatedItem?: never;
+  relatedItem?: string;
 }
