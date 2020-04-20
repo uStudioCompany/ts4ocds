@@ -5,7 +5,7 @@
 ![npm peer dependency version](https://img.shields.io/npm/dependency-version/ts4ocds/peer/typescript)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-# `ts4ocds`
+# TS4OCDS
 
 `ts4ocds` is a library of TypeScript interfaces that takes an approach
 to befriend large OCDS JSONs with your per-project routine of
@@ -23,7 +23,7 @@ $ yarn add -D ts4ocds
 
 ## Usage
 
-### `standard`
+### Standard
 
 This includes all types and interfaces from bare
 [OCDS v1.1.4](https://standard.open-contracting.org/latest/en/) standard.
@@ -36,7 +36,7 @@ Note, that some top-level entities like `Tender` or `Planning`
 are not included here as they sometimes depend on a context they are
 used in.
 
-### `extensions`
+### Extensions
 
 ```typescript
 import { Observation } from 'ts4ocds/extensions/metrics';
