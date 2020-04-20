@@ -52,6 +52,21 @@ entities from the `standard` with new properties. Here we extend
 such interfaces from their `standard` counterparts and add new properties
 so, for example, you can find `Item` in both `standard` and some of the `extensions`.
 
+### Validators
+
+Validators help you better differentiate interface with relatable fields.
+For example, `Requirement`'s `value` field depends on its `dataType`, which
+could easily be checked with a validator function:
+
+```typescript
+import { isOfTypeString } from 'ts4ocds/validators';
+
+const stringRequirement = isOfTypeString(requirement);
+
+// Asserts that requirement's dataType is 'string',
+// so that its value should also be of type string
+```
+
 ## Contributing
 
 We are open to receive any contributings to our project. If you are willing to contribute,
