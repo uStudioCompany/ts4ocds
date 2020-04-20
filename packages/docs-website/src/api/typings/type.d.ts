@@ -1,7 +1,14 @@
 import type { BasicType } from './basic-type';
 import type { VariableReflection } from './reflection';
 
-export type Type = BasicType | UnionType | IntersectionType | ArrayType | ObjectType | IndexSignatureType;
+export type Type =
+  | BasicType
+  | UnionType
+  | IntersectionType
+  | ArrayType
+  | ObjectType
+  | IndexSignatureType
+  | TypeParameterType;
 
 export interface ReflectionType {
   type: 'reflection';
@@ -47,4 +54,14 @@ export interface IntersectionType {
 export interface ArrayType {
   type: 'array';
   elementType: Type;
+}
+
+export interface TypeParameterType {
+  type: 'typeParameter';
+  name: string;
+  constraint?: {
+    name: string;
+    id: string;
+    type: Type;
+  };
 }

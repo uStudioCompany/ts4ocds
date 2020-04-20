@@ -28,7 +28,6 @@ const renderLink = ({
         </Link>
       );
     }
-
     /**
      * Where in conditional type reference id is not specified
      */
@@ -39,7 +38,6 @@ const renderLink = ({
         </Link>
       );
     }
-
     /**
      * This is an edge case of the reference pointing to the type parameter that cannot be validated here
      */

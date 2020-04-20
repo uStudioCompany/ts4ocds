@@ -14,6 +14,9 @@ const StringLiteral = styled(Text)`
 
 const renderType = (type: Type): ReactNode => {
   switch (type.type) {
+    case 'typeParameter': {
+      return `<${type.name}>`;
+    }
     case 'intrinsic': {
       return type.name;
     }

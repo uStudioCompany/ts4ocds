@@ -8,8 +8,10 @@ import { Mixin } from 'ustudio-ui/theme';
 
 const InlineCode = styled(Tag)`
   ${Mixin.Font.codeRegular()};
-  font-size: inherit;
+  font-size: 12px;
   font-weight: inherit;
+
+  padding: 2px var(--i-small);
 `;
 
 const Heading = styled(Text)`
@@ -51,7 +53,7 @@ const renderers: Renderers = {
     <Code
       language={language}
       style={coy}
-      customStyle={{ padding: 'var(--i-medium) 0' }}
+      customStyle={{ padding: 'var(--i-medium)', backgroundColor: 'var(--c-light)' }}
       codeTagProps={{ style: { whiteSpace: 'pre-wrap' } }}
     >
       {value}
