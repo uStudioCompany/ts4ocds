@@ -10,9 +10,7 @@ import type { MilestoneReference } from './milestone-reference';
  * An actual or target observation.
  * Observations should include either a value (for financial metrics) or measure (for other metrics).
  */
-export type Observation = FinancialObservation | NonFinancialObservation;
-
-export interface BaseObservation {
+export interface Observation {
   /**
    * A local identifier for this specific observation.
    * This may be an arbitrary identifier, or could be a composite of the metric identifier, and the date
@@ -38,23 +36,17 @@ export interface BaseObservation {
    */
   notes?: string;
   /**
-   * A link to the milestone in the implementation section of OCDS to which this forecast,
-   * target or actual observation relates.
-   */
-  relatedImplementationMilestone?: MilestoneReference;
-}
-
-export interface FinancialObservation extends BaseObservation {
-  /**
    * For financial metrics, the value of this forecast, target or actual observation.
    */
   value: Value;
-}
-
-export interface NonFinancialObservation extends BaseObservation {
   /**
    * For non-financial metrics, the measure of this forecast, target or actual observation.
    * Measures may be provided as free text or numerical values.
    */
   measure?: string | number;
+  /**
+   * A link to the milestone in the implementation section of OCDS to which this forecast,
+   * target or actual observation relates.
+   */
+  relatedImplementationMilestone?: MilestoneReference;
 }
