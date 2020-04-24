@@ -1,6 +1,6 @@
 require('ts-node').register();
 
-exports.createPages = require('./src/lib/create-pages').createPages;
+exports.createPages = require('./src/lib').createPages;
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({

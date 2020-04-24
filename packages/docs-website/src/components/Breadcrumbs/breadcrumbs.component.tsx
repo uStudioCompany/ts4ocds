@@ -4,7 +4,7 @@ import Flex from 'ustudio-ui/components/Flex';
 
 import { globalHistory } from '@reach/router';
 import config from '../../../gatsby-config.js';
-import categories from '../../lib/categories';
+import { categories } from '../../lib';
 
 const includesPrefix = (pathArray: string[]): boolean => pathArray.includes(config.pathPrefix.slice(1));
 

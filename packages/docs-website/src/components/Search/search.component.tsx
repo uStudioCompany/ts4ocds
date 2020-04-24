@@ -1,5 +1,5 @@
 import React, { ReactNode, useMemo, useState } from 'react';
-import TextInput from 'ustudio-ui/components/Input';
+import { css } from 'styled-components';
 import Text from 'ustudio-ui/components/Text';
 
 import { Module, Reflection } from '../../api/typings';
@@ -89,7 +89,7 @@ const Search: React.FC = () => {
 
   return (
     <Styled.SearchContainer>
-      <TextInput value={query} onChange={setQuery} placeholder="Search" />
+      <Styled.Input value={query} onChange={setQuery} placeholder="Search" />
 
       <Styled.ResultsContainer>
         {!foundModules.length && !foundReflections.length && <Styled.NoResults>No items found</Styled.NoResults>}

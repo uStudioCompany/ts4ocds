@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import TextInput from 'ustudio-ui/components/Input/TextInput';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../utils';
 
@@ -66,11 +67,15 @@ const GroupList = styled.ul`
 `;
 
 const GroupListTitle = styled.li`
-  padding: var(--i-small) var(--i-regular);
+  padding: 0 var(--i-regular) var(--i-small);
   color: var(--c-dark);
 
   border-top: 1px solid var(--c-light);
   border-bottom: 1px solid var(--c-light);
 `;
 
-export default withDisplayNames({ SearchContainer, ResultsContainer, NoResults, GroupList, GroupListTitle });
+const Input = styled(TextInput)`
+  border: 1px solid transparent;
+`;
+
+export default withDisplayNames({ SearchContainer, ResultsContainer, NoResults, GroupList, GroupListTitle, Input });
