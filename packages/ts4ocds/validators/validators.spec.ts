@@ -1,7 +1,7 @@
+import { Conversion, UnrelatedConversion } from '../extensions/conversions';
 import { PeriodConstrained, PeriodInDays } from '../standard/definitions';
+import { isRelated } from './extensions';
 import { isConstrained, isInDays } from './standard';
-
-const random = Math.random() <= 0.5;
 
 describe('Period', () => {
   const periodInDays: PeriodInDays = {
@@ -33,3 +33,21 @@ describe('Period', () => {
     });
   });
 });
+
+describe('Conversions', () => {
+  const conversion: Partial<Conversion> = {
+    relatesTo: 'requirement',
+    relatedItem: '',
+  };
+
+  const unrelatedConversion: Partial<UnrelatedConversion> = {};
+
+  describe('isRelated', () => {
+    it('Should validate true against RelatedConversion', () => {
+      expect(isRelated(conversion as Conversion)).toBe(true);
+
+      expect(isRelated(unrelatedConversion as Conversion)).toBe(false);
+    });
+  });
+});
+
