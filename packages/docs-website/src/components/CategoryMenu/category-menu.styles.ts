@@ -72,7 +72,7 @@ const MenuButton = styled.button`
   transition: var(--transition);
 
   &:hover {
-    color: var(--c-neutral);
+    color: var(--c-light);
 
     ${MenuIcon} {
       transform: rotate(0deg);
