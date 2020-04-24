@@ -1,7 +1,9 @@
 import { Conversion, UnrelatedConversion } from '../extensions/conversions';
 import { FinancialObservation, NonFinancialObservation, Observation } from '../extensions/metrics';
+import { WithOptionDetails } from '../extensions/options/extension/with-option-details';
 import { PeriodConstrained, PeriodInDays } from '../standard/definitions';
-import { isFinancial, isNonFinancial, isRelated } from './extensions';
+
+import { hasOptionGroups, hasOptionsToCombine, isFinancial, isNonFinancial, isRelated } from './extensions';
 import { isConstrained, isInDays } from './standard';
 
 describe('Period', () => {
@@ -78,6 +80,40 @@ describe('Metrics', () => {
 
     it('Should validate false against FinancialObservation', () => {
       expect(isNonFinancial(financialObservation as Observation)).toBe(false);
+    });
+  });
+});
+
+describe('Options', () => {
+  const entityWithOptionGroups: WithOptionDetails = {
+    optionDetails: {
+      optionGroups: [],
+    },
+  };
+
+  const entityWithOptionsToCombine: WithOptionDetails = {
+    optionDetails: {
+      optionsToCombine: [],
+    },
+  };
+
+  describe('hasOptionGroups', () => {
+    it('Should validate true against entity with optionGroups', () => {
+      expect(hasOptionGroups(entityWithOptionGroups)).toBe(true);
+    });
+
+    it('Should validate false against entity with optionsToCombine', () => {
+      expect(hasOptionGroups(entityWithOptionsToCombine)).toBe(false);
+    });
+  });
+
+  describe('hasOptionsToCombine', () => {
+    it('Should validate true against entity with optionsToCombine', () => {
+      expect(hasOptionsToCombine(entityWithOptionsToCombine)).toBe(true);
+    });
+
+    it('Should validate false against entity with optionGroups', () => {
+      expect(hasOptionsToCombine(entityWithOptionGroups)).toBe(false);
     });
   });
 });
