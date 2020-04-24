@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Flex from 'ustudio-ui/components/Flex';
-import Grid from 'ustudio-ui/components/Grid';
+import Grid from 'ustudio-ui/components/Grid/Grid';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../utils';
 

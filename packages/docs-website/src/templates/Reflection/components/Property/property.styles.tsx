@@ -39,10 +39,10 @@ const Type = styled(Flex).attrs(() => ({
   alignment: {
     vertical: 'center',
   },
+  isWrap: true
 }))`
   ${Mixin.Font.codeRegular()};
   white-space: pre-wrap;
-  flex-wrap: wrap;
 
   color: var(--c-primary-light);
 

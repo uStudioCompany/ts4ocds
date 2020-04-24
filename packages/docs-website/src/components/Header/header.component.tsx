@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import Flex from 'ustudio-ui/components/Flex';
 import useMediaQuery from 'ustudio-ui/hooks/use-media-query';
+
 import categories from '../../lib/categories';
 import CategoryMenu from '../CategoryMenu';
 import Search from '../Search';
@@ -23,13 +25,13 @@ const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => {
 
   return (
     <Styled.Header>
-      <Styled.Nav>
+      <Flex as="nav" alignment={{ vertical: 'center' }}>
         <Styled.SiteTitleLink to="/">
           <Styled.SiteTitle>{siteTitle}</Styled.SiteTitle>
         </Styled.SiteTitleLink>
 
         {isMd && <Navigation />}
-      </Styled.Nav>
+      </Flex>
 
       {isMd ? (
         <Search />

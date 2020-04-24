@@ -26,11 +26,6 @@ const Header = styled.header`
   `)}
 `;
 
-const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-`;
-
 const SiteTitleLink = styled(Link)`
   color: var(--c-lightest);
   margin-right: var(--i-large);
@@ -174,4 +169,4 @@ const MobileMenu = styled(Drawer)`
   background: var(--g-t4o);
 `;
 
-export default withDisplayNames({ Header, Nav, SiteTitle, SiteTitleLink, ButtonsList, ModuleLink, Burger, MobileMenu });
+export default withDisplayNames({ Header, SiteTitle, SiteTitleLink, ButtonsList, ModuleLink, Burger, MobileMenu });

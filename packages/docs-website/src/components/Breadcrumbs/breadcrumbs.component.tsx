@@ -1,11 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import Flex from 'ustudio-ui/components/Flex';
 
 import { globalHistory } from '@reach/router';
 import config from '../../../gatsby-config.js';
 import categories from '../../lib/categories';
-
-import Styled from './breadcrumbs.styles';
 
 const includesPrefix = (pathArray: string[]): boolean => pathArray.includes(config.pathPrefix.slice(1));
 
@@ -26,7 +25,7 @@ const renderBreadcrumbs = () => {
   const pathArray = includesPrefix(filteredPathArray) ? filteredPathArray.slice(1) : filteredPathArray;
 
   return pathArray.length ? (
-    <Styled.Breadcrumbs>
+    <Flex margin={{ bottom: 'regular' }} isWrap>
       <small>{whichCategory(pathArray[0])}&nbsp;</small>
 
       {pathArray.slice(0, -1).map((path: string) => (
@@ -37,7 +36,7 @@ const renderBreadcrumbs = () => {
       ))}
 
       <small>/ {kebabToPascal(pathArray[pathArray.length - 1])}</small>
-    </Styled.Breadcrumbs>
+    </Flex>
   ) : (
     <></>
   );

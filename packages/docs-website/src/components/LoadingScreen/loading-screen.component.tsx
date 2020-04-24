@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Grid from 'ustudio-ui/components/Grid';
+import Grid from 'ustudio-ui/components/Grid/Grid';
 import Cell from 'ustudio-ui/components/Grid/Cell';
 import Placeholder from 'ustudio-ui/components/Placeholder';
 import Styled from './loading-screen.styles';

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import Flex from 'ustudio-ui/components/Flex';
 import { Mixin } from 'ustudio-ui/theme';
+
 import { withDisplayNames } from '../../utils';
 
 const Wrapper = styled.div<{ isLoaded: boolean }>(

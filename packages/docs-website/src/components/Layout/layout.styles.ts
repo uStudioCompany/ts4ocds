@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
-import Grid from 'ustudio-ui/components/Grid';
+import Grid from 'ustudio-ui/components/Grid/Grid';
 import { Mixin } from 'ustudio-ui/theme';
+
 import { withDisplayNames } from '../../utils';
 
 const Layout = styled.main`
