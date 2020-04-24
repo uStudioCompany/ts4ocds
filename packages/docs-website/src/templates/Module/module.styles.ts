@@ -1,8 +1,9 @@
 import { Link } from 'gatsby';
-import styled, { css } from 'styled-components';
-import { Flex, Grid } from 'ustudio-ui';
+import styled from 'styled-components';
+import Flex from 'ustudio-ui/components/Flex';
+import Grid from 'ustudio-ui/components/Grid';
 import { Mixin } from 'ustudio-ui/theme';
-import { withDisplayNames } from '../../../utils';
+import { withDisplayNames } from '../../utils';
 
 const ModulesList = styled.ul`
   display: grid;

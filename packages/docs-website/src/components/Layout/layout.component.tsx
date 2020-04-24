@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Cell, Flex } from 'ustudio-ui';
-import { useMediaQuery } from 'ustudio-ui/hooks';
+import Cell from 'ustudio-ui/components/Grid/Cell';
+import Flex from 'ustudio-ui/components/Flex';
+import useMediaQuery from 'ustudio-ui/hooks/use-media-query';
 import { ThemeProvider } from 'ustudio-ui/theme';
 
 import packageJSON from '../../../../ts4ocds/package.json';

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Cell, Grid, Placeholder } from 'ustudio-ui';
+import Grid from 'ustudio-ui/components/Grid';
+import Cell from 'ustudio-ui/components/Grid/Cell';
+import Placeholder from 'ustudio-ui/components/Placeholder';
 import Styled from './loading-screen.styles';
 
 const LoadingScreen: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {

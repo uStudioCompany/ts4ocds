@@ -1,7 +1,10 @@
 import React, { ReactElement } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled, { css } from 'styled-components';
-import { Flex, Text } from 'ustudio-ui';
+
+import Flex from 'ustudio-ui/components/Flex';
+import Text from 'ustudio-ui/components/Text';
+
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../../../utils';
 

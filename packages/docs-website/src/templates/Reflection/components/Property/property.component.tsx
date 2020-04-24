@@ -1,5 +1,7 @@
 import React from 'react';
-import { Flex, Tag } from 'ustudio-ui';
+import Flex from 'ustudio-ui/components/Flex';
+import Tag from 'ustudio-ui/components/Tag';
+
 import { Type } from '../../../../api/typings';
 import Styled from './property.styles';
 

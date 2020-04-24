@@ -1,7 +1,9 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Text } from 'ustudio-ui';
+import Text from 'ustudio-ui/components/Text';
+
 import { Type } from '../../../../api/typings';
+
 import Conditional from './conditional.component';
 import IndexedAccess from './indexed-access.component';
 import Reference from './reference.component';

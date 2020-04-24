@@ -1,5 +1,6 @@
 import React from 'react';
-import { Flex } from 'ustudio-ui';
+import Flex from 'ustudio-ui/components/Flex';
+
 import { Conditional as ConditionalType } from '../../../../api/typings';
 import { renderType } from './type.module';
 

@@ -1,8 +1,11 @@
 import React, { ReactNode, useMemo, useState } from 'react';
-import { TextInput, Text } from 'ustudio-ui';
+import TextInput from 'ustudio-ui/components/Input';
+import Text from 'ustudio-ui/components/Text';
+
 import { Module, Reflection } from '../../api/typings';
 import { useModules, useReflections } from '../../context/api.context';
 import { createUrl } from '../../utils';
+
 import Styled from './search.styles';
 import StyledHeader from '../Header/header.styles';
 

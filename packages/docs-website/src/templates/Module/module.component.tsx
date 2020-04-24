@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Cell, Flex } from 'ustudio-ui';
+import Cell from 'ustudio-ui/components/Grid/Cell';
+import Flex from 'ustudio-ui/components/Flex';
+
 import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../api/typings';
 import { createUrl } from '../../utils';
 import Styled from './module.styles';

@@ -1,9 +1,11 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
-import { Flex } from 'ustudio-ui';
-import { useMediaQuery } from 'ustudio-ui/hooks';
+import Flex from 'ustudio-ui/components/Flex';
+import useMediaQuery from 'ustudio-ui/hooks/use-media-query';
+
 import { hasTypeParameter, isInterface } from '../../api/validator';
 import { Reflection, Property as PropertyType, TypeAliasReflection, InterfaceReflection } from '../../api/typings';
+
 import Layout from '../../components/Layout';
 import { Property } from './components';
 import ModuleContext from './module.context';

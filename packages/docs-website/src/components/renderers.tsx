@@ -3,7 +3,9 @@ import { Renderers } from 'react-markdown';
 import styled, { css } from 'styled-components';
 import { Prism as Code } from 'react-syntax-highlighter';
 import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { Flex, Tag, Text } from 'ustudio-ui';
+import Flex from 'ustudio-ui/components/Flex';
+import Tag from 'ustudio-ui/components/Tag';
+import Text from 'ustudio-ui/components/Text';
 import { Mixin } from 'ustudio-ui/theme';
 
 const InlineCode = styled(Tag)`

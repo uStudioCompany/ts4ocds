@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Grid } from 'ustudio-ui';
+import Grid from 'ustudio-ui/components/Grid';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../utils';
 

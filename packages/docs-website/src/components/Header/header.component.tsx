@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useMediaQuery } from 'ustudio-ui/hooks';
+import useMediaQuery from 'ustudio-ui/hooks/use-media-query';
 import categories from '../../lib/categories';
 import CategoryMenu from '../CategoryMenu';
 import Search from '../Search';

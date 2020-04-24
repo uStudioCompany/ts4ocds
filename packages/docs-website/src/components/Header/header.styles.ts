@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
-import { Drawer } from 'ustudio-ui';
+import Drawer from 'ustudio-ui/components/Drawer';
 import { Mixin } from 'ustudio-ui/theme';
 import { withDisplayNames } from '../../utils';
 
