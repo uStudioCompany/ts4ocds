@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex } from 'ustudio-ui';
-import { withDisplayNames } from '../../../utils';
+import { withDisplayNames } from '../../utils';
 
 const Breadcrumbs = styled(Flex)`
   flex-wrap: wrap;

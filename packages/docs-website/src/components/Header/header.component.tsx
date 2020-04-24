@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'ustudio-ui/hooks';
 import categories from '../../lib/categories';
-import CategoryMenu from './CategoryMenu';
-import Search from './Search';
+import CategoryMenu from '../CategoryMenu';
+import Search from '../Search';
 
-import Styled from './style';
+import Styled from './header.styles';
 
 const Navigation: React.FC = () => (
   <Styled.ButtonsList>

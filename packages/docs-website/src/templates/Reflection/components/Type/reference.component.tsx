@@ -1,9 +1,9 @@
 import { Link } from 'gatsby';
 import React, { ReactNode } from 'react';
 import { ModulesMap, Reference as ReferenceType, ReflectionsMap } from '../../../../api/typings';
-import { useModules, useReflections } from '../../../../context/APIContext';
+import { useModules, useReflections } from '../../../../context/api.context';
 import { createUrl } from '../../../../utils';
-import { useModule } from '../module-context';
+import { useModule } from '../../module.context';
 
 const renderLink = ({
   reference,

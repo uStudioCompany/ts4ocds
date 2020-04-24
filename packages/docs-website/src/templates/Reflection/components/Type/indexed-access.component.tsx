@@ -1,6 +1,6 @@
 import React from 'react';
 import { IndexedAccess as IndexedAccessType } from '../../../../api/typings';
-import renderType from './render-type';
+import { renderType } from './type.module';
 
 const IndexedAccess: React.FC<IndexedAccessType> = (indexedAccess) => {
   return (

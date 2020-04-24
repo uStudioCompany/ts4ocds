@@ -1,10 +1,10 @@
 import React, { ReactNode, useMemo, useState } from 'react';
 import { TextInput, Text } from 'ustudio-ui';
-import { Module, Reflection } from '../../../api/typings';
-import { useModules, useReflections } from '../../../context/APIContext';
-import { createUrl } from '../../../utils';
-import Styled from './style';
-import StyledHeader from '../style';
+import { Module, Reflection } from '../../api/typings';
+import { useModules, useReflections } from '../../context/api.context';
+import { createUrl } from '../../utils';
+import Styled from './search.styles';
+import StyledHeader from '../Header/header.styles';
 
 const findModules = ({ query, modules }: { query: string; modules: Partial<Module>[] }): Partial<Module>[] => {
   return modules.filter((module) => module.name?.toLowerCase().includes(query.trim().toLowerCase()));
@@ -30,7 +30,7 @@ const renderModules = (modules: Partial<Module>[]): ReactNode => {
       {modules.map(({ name }) => {
         return (
           <li key={name}>
-            <StyledHeader.ModuleLink to={createUrl(name)}>{name}</StyledHeader.ModuleLink>
+            <StyledHeader.ModuleLink to={createUrl(name as string)}>{name}</StyledHeader.ModuleLink>
           </li>
         );
       })}
@@ -48,7 +48,7 @@ const renderReflections = (reflections: Partial<Reflection>[]): ReactNode => {
       {reflections.map(({ name, module }) => {
         return (
           <li key={name}>
-            <StyledHeader.ModuleLink to={createUrl(module, name)}>{name}</StyledHeader.ModuleLink>
+            <StyledHeader.ModuleLink to={createUrl(module as string, name as string)}>{name}</StyledHeader.ModuleLink>
           </li>
         );
       })}

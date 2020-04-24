@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Cell, Grid, Placeholder } from 'ustudio-ui';
-import Styled from './style';
+import Styled from './loading-screen.styles';
 
 const LoadingScreen: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
   const [isRendering, setRendering] = useState(false);

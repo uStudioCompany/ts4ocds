@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Mixin } from 'ustudio-ui/theme';
-import { withDisplayNames } from '../../../utils';
+import { withDisplayNames } from '../../utils';
 
 const ResultsContainer = styled.div`
   position: absolute;

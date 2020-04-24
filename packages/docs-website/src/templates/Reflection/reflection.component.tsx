@@ -2,13 +2,13 @@ import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import { Flex } from 'ustudio-ui';
 import { useMediaQuery } from 'ustudio-ui/hooks';
-import { hasTypeParameter, isInterface } from '../../../api/validator';
-import { Reflection, Property as PropertyType, TypeAliasReflection, InterfaceReflection } from '../../../api/typings';
-import Layout from '../../Layout';
-import Property from './Property';
-import ModuleContext from './module-context';
+import { hasTypeParameter, isInterface } from '../../api/validator';
+import { Reflection, Property as PropertyType, TypeAliasReflection, InterfaceReflection } from '../../api/typings';
+import Layout from '../../components/Layout';
+import { Property } from './components';
+import ModuleContext from './module.context';
 
-import Styled from './style';
+import Styled from './reflection.styles';
 
 const renderProperty = (property: TypeAliasReflection | PropertyType, isReflectionInterface?: boolean): ReactNode => {
   return (
@@ -54,12 +54,7 @@ const ReflectionTemplate: React.FC<{ pageContext: Reflection }> = ({ pageContext
             {hasTypeParameter(reflection) && (
               <Styled.PropertyList>
                 {reflection.typeParameter?.map((tp) => (
-                  <Property
-                    name={`<${tp.name}>`}
-                    description="Type parameter"
-                    type={tp.type}
-                    key={tp.id}
-                  />
+                  <Property name={`<${tp.name}>`} description="Type parameter" type={tp.type} key={tp.id} />
                 ))}
               </Styled.PropertyList>
             )}

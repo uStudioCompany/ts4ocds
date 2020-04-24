@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { IndexSignatureType, ObjectType, VariableReflection } from '../../../../api/typings';
-import renderType from './render-type';
+import { renderType } from './type.module';
 
 const renderIndexSignature = (reflection: IndexSignatureType) => {
   const indexSignature = reflection.declaration.indexSignature?.[0];

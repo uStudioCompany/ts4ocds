@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Cell, Flex } from 'ustudio-ui';
-import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../../api/typings';
-import { createUrl } from '../../../utils';
-import Styled from './style';
-import Layout from '../../Layout';
+import { InterfaceReflection, Module as ModuleType, TypeAliasReflection } from '../../api/typings';
+import { createUrl } from '../../utils';
+import Styled from './module.styles';
+import Layout from '../../components/Layout';
 
 const Module: React.FC<{ pageContext: ModuleType }> = ({ pageContext: module }) => {
   const interfaces = module.children.filter((reflection) => reflection.kindString === 'Interface');

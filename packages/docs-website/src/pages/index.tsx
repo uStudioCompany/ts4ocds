@@ -5,7 +5,6 @@ import readme from '../../README.md';
 import Layout from '../components/Layout';
 import renderers from '../components/renderers';
 
-
 const Index: React.FC = () => {
   return (
     <>

@@ -1,5 +1,5 @@
 import React from 'react';
-import CaretIcon from '../../../assets/icons/caret.inline.svg';
+import CaretIcon from '../../assets/icons/caret.inline.svg';
 
 const Caret: React.FC<{ className?: string }> = ({ className }) => <CaretIcon className={className} />;
 

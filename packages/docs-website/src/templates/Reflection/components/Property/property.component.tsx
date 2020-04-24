@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Tag } from 'ustudio-ui';
 import { Type } from '../../../../api/typings';
-import Styled from './style';
+import Styled from './property.styles';
 
 import { renderType } from '../Type';
 

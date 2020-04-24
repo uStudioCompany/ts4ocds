@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import { withDisplayNames } from '../../../utils';
+import { withDisplayNames } from '../../utils';
 
 const PropertyList = styled.ul`
   display: grid;

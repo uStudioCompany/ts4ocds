@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Mixin } from 'ustudio-ui/theme';
-import { withDisplayNames } from '../../../utils';
-import Caret from './Caret';
+import { withDisplayNames } from '../../utils';
+import Caret from '../Caret';
 
 const ButtonContainer = styled.div`
   position: relative;

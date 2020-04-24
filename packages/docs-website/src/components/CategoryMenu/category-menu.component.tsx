@@ -1,8 +1,8 @@
 import React from 'react';
-import { createUrl } from '../../../utils';
+import { createUrl } from '../../utils';
 
-import Styled from './style';
-import StyledHeader from '../style';
+import Styled from './category-menu.styles';
+import StyledHeader from '../Header/header.styles';
 
 const CategoryMenu: React.FC<{ name: string; modules: string[] }> = ({ name, modules }) => {
   return (

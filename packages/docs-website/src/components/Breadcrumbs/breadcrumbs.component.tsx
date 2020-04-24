@@ -2,10 +2,10 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import { globalHistory } from '@reach/router';
-import config from '../../../../gatsby-config.js';
-import categories from '../../../lib/categories';
+import config from '../../../gatsby-config.js';
+import categories from '../../lib/categories';
 
-import Styled from './style';
+import Styled from './breadcrumbs.styles';
 
 const includesPrefix = (pathArray: string[]): boolean => pathArray.includes(config.pathPrefix.slice(1));
 

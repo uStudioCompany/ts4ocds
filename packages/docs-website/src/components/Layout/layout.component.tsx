@@ -7,12 +7,12 @@ import packageJSON from '../../../../ts4ocds/package.json';
 
 import { modulesMap, reflectionsMap } from '../../api';
 
-import APIContext from '../../context/APIContext';
+import APIContext from '../../context/api.context';
 import LoadingScreen from '../LoadingScreen';
-import Breadcrumbs from './Breadcrumbs';
-import GlobalStyles from './global-styles';
+import Breadcrumbs from '../Breadcrumbs';
+import GlobalStyles from '../GlobalStyles';
 
-import Styled from './style';
+import Styled from './layout.styles';
 import Header from '../Header';
 
 const Layout: React.FC = ({ children }) => {

@@ -2,12 +2,10 @@ import React, { ReactNode } from 'react';
 import { v4 } from 'uuid';
 import { IntersectionType, UnionType } from '../../../../api/typings';
 import { isIntrinsic } from '../../../../api/validator';
-import renderType from './render-type';
+import { renderType } from './type.module';
 
 const mapUnion = (union: UnionType | IntersectionType): ReactNode[] => {
-  return union.types
-    .filter((type) => !(isIntrinsic(type) && type.name === 'undefined'))
-    .map(renderType);
+  return union.types.filter((type) => !(isIntrinsic(type) && type.name === 'undefined')).map(renderType);
 };
 
 const renderNode = (separator: '|' | '&') => (node: ReactNode, index: number, array: ReactNode[]) => {
