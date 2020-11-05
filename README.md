@@ -7,6 +7,19 @@
 
 # TS4OCDS
 
+## Important notice!
+
+**We've just released a full and official `1.0.0` version!**
+
+Being a release candidate for so long was not easy, but we've come to many conclusions while using this `rc`
+version and decided to completely rewrite it and move to the monorepo structure.
+We've also updated our [docs](https://ustudioteam.github.io/ts4ocds), they seem to be more fancy and useful (at least for now).
+
+Be sure to check out this [new version](https://github.com/ustudioteam/ts4ocds).
+If you decide to proceed with this release candidate – be cautious, as it was completely rethought and redone.
+
+---
+
 `ts4ocds` is a library of TypeScript interfaces that takes an approach
 to befriend large OCDS JSONs with your per-project routine of
 writing whole lotta interfaces for them.
